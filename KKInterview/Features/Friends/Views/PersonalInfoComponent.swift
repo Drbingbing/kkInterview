@@ -14,7 +14,7 @@ struct PersonalInfoComponent: ComponentBuilder {
     func build() -> Component {
         HStack {
             VStack(spacing: 8) {
-                Text("紫琳", font: .medium(size: 17))
+                Text("紫晽", font: .medium(size: 17))
                     .textColor(.primaryLabel)
                 HStack(alignItems: .center) {
                     Text("設定KOKO ID", font: .regular(size: 13))

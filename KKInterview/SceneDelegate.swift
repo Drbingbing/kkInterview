@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import KKLibrary
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -21,6 +22,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = RootTabBarViewController()
         window?.makeKeyAndVisible()
+        
+//        let service = KKService(serverConfig: ServerConfig.development)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
