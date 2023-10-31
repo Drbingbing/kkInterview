@@ -23,6 +23,11 @@ extension UIColor {
     static var primarySeparator: UIColor {
         return UIColor(red: 239/255, green: 239/255, blue: 239/255, alpha: 1)
     }
+    
+    /// r: 228, g: 228, b: 228
+    static var secondarySeparator: UIColor {
+        return UIColor(red: 228/255, green: 228/255, blue: 228/255, alpha: 1)
+    }
 }
 
 // MARK: - Bacground
@@ -61,5 +66,15 @@ extension UIColor {
     /// r: 166, g: 204, b: 66
     static var boogerGreen: UIColor {
         return UIColor(red: 166/255, green: 204/255, blue: 66/255, alpha: 1)
+    }
+}
+
+
+// MARK: - Pink
+extension UIColor {
+    
+    /// r: 249, g: 178, b: 220
+    static var softPink: UIColor {
+        return UIColor(red: 249/255, green: 178/255, blue: 220/255, alpha: 1)
     }
 }

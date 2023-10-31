@@ -15,10 +15,12 @@ final class FriendsViewController: UIViewController {
     private var component: Component {
         VStack {
             PersonalInfoComponent()
+            FriendsInvitationComponent()
             FriendPageComponent()
             FriendsPageIndicatorComponent()
             Separator(color: .primarySeparator)
-            EmptyFriendsComponent()
+            SearchBarComponent()
+            FriendListComponent()
         }
         .inset(v: 44)
     }
