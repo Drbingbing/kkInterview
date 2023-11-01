@@ -7,6 +7,7 @@
 
 import Foundation
 import ComposableArchitecture
+import KKLibrary
 
 struct RootTabBarStore: Reducer {
     
@@ -14,6 +15,7 @@ struct RootTabBarStore: Reducer {
         var viewControllers: [RootViewControllerData] = []
         var tabBarItemsData: TabBarItemsData = TabBarItemsData(items: [])
         var selectedIndex: Int = 0
+        var currentUser: User? = nil
     }
     
     enum Action {
@@ -21,6 +23,7 @@ struct RootTabBarStore: Reducer {
         case tabBarItemsData(TabBarItemsData)
         case viewControllers([RootViewControllerData])
         case selectedIndex(Int)
+        case loginResponse(TaskResult<User?>)
     }
     
     var body: some ReducerOf<Self> {
@@ -30,7 +33,10 @@ struct RootTabBarStore: Reducer {
                 return .concatenate(
                     .send(.tabBarItemsData(tabData())),
                     .send(.viewControllers([.wallets, .friends, .home, .management, .setting])),
-                    .send(.selectedIndex(1))
+                    .send(.selectedIndex(1)),
+                    .run { send in
+                        await send(.loginResponse(TaskResult { try await AppEnvironment.current.apiService.login() }))
+                    }
                 )
             case let .tabBarItemsData(tabBarItemData):
                 state.tabBarItemsData = tabBarItemData
@@ -40,6 +46,11 @@ struct RootTabBarStore: Reducer {
                 return .none
             case let .selectedIndex(selectedIndex):
                 state.selectedIndex = selectedIndex
+                return .none
+            case let .loginResponse(.success(user)):
+                state.currentUser = user
+                return .none
+            case .loginResponse(.failure):
                 return .none
             }
         }

@@ -11,4 +11,10 @@ public protocol KKServiceProtocol {
     var serverConfig: ServerConfigType { get }
     
     init(serverConfig: ServerConfigType)
+    
+    func userInfo() async throws -> UserEnvelope
+    
+    func login() async throws -> User?
+    
+    func friendList(page: Int) async throws -> [Person]
 }

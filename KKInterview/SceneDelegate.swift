@@ -23,7 +23,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.rootViewController = RootTabBarViewController()
         window?.makeKeyAndVisible()
         
-//        let service = KKService(serverConfig: ServerConfig.development)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

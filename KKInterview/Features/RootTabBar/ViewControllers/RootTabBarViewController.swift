@@ -14,6 +14,7 @@ final class RootTabBarViewController: UITabBarController {
     let store: StoreOf<RootTabBarStore>
     let viewStore: ViewStoreOf<RootTabBarStore>
     private var cancallable: [AnyCancellable] = []
+    private let kkTabBar = KKTabBarView()
     
     init() {
         self.store = Store(initialState: RootTabBarStore.State(), reducer: { RootTabBarStore() })
@@ -30,17 +31,33 @@ final class RootTabBarViewController: UITabBarController {
         
         bindingStyle()
         binding()
+        setupCustomTabBar()
         
         viewStore.send(.viewDidLoad)
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+    }
+    
+    override func updateViewConstraints() {
+        kkTabBar.translatesAutoresizingMaskIntoConstraints = false
+        kkTabBar.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        kkTabBar.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        kkTabBar.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        kkTabBar.heightAnchor.constraint(equalToConstant: view.safeAreaInsets.bottom + 54).isActive = true
+        super.updateViewConstraints()
+    }
+    
+    private func setupCustomTabBar() {
+        view.addSubview(kkTabBar)
+        kkTabBar.delegate = self
+        view.setNeedsUpdateConstraints()
+    }
+    
     private func bindingStyle() {
         view.backgroundColor = .white
-        tabBar.tintColor = .primaryTintColor
-        let layer = CALayer()
-        layer.frame = CGRect(x: 0, y: -0.5, width: view.bounds.width, height: 1)
-        layer.backgroundColor = UIColor.separator.cgColor
-        tabBar.layer.addSublayer(layer)
+        tabBar.isHidden = true
     }
     
     private func binding() {
@@ -63,44 +80,29 @@ final class RootTabBarViewController: UITabBarController {
                 self?.selectedIndex = selectedIndex
             }
             .store(in: &cancallable)
+        viewStore.publisher.currentUser
+            .sink { user in
+                guard let user else { return }
+                AppEnvironment.updateCurrentUser(user)
+                NotificationCenter.default.post(.init(name: .kk_userUpdated))
+            }
+            .store(in: &cancallable)
     }
     
     private func setTabBarItemStyles(_ tabBarItemsData: TabBarItemsData) {
-        for item in tabBarItemsData.items {
-            switch item {
-            case .wallets(let index):
-                walletsTabBarItemStyle(tabBarItem(at: index))
-            case .friends(let index):
-                friendsTabBarItemStyle(tabBarItem(at: index))
-            case .home(let index):
-                homeTabBarItemStyle(tabBarItem(at: index))
-            case .management(let index):
-                managementTabBarItemStyle(tabBarItem(at: index))
-            case .setting(let index):
-                settingTabBarItemStyle(tabBarItem(at: index))
-            }
-        }
-    }
-    
-    private func tabBarItem(at atIndex: Int) -> UITabBarItem? {
-        if (tabBar.items?.count ?? 0) > atIndex {
-            if let item = tabBar.items?[atIndex] {
-                return item
-            }
-        }
-        return nil
+        kkTabBar.populate(tabBarItemData: tabBarItemsData)
     }
     
     fileprivate static func viewController(from viewControllerData: RootViewControllerData) -> UIViewController {
         switch viewControllerData {
         case .wallets:
-            return UIViewController()
+            return FriendsViewController(episode: .episode1)
         case .friends:
-            return FriendsViewController()
+            return FriendsViewController(episode: .episode2)
         case .home:
             return UIViewController()
         case .management:
-            return UIViewController()
+            return FriendsViewController(episode: .episode3)
         case .setting:
             return UIViewController()
         }
@@ -108,33 +110,10 @@ final class RootTabBarViewController: UITabBarController {
 }
 
 
-// MARK: - Root TabBar Styles
-private func walletsTabBarItemStyle(_ tabbarItem: UITabBarItem?) {
-    guard let tabbarItem else { return }
-    tabbarItem.title = "錢錢"
-    tabbarItem.image = UIImage(named: "ic_tabbar_products")
-}
-
-private func friendsTabBarItemStyle(_ tabbarItem: UITabBarItem?) {
-    guard let tabbarItem else { return }
-    tabbarItem.title = "朋友"
-    tabbarItem.image = UIImage(named: "ic_tabbar_friends")
-}
-
-private func homeTabBarItemStyle(_ tabbarItem: UITabBarItem?) {
-    guard let tabbarItem else { return }
-    tabbarItem.title = ""
-    tabbarItem.image = UIImage(named: "ic_tabbar_home")?.withRenderingMode(.alwaysOriginal)
-}
-
-private func managementTabBarItemStyle(_ tabbarItem: UITabBarItem?) {
-    guard let tabbarItem else { return }
-    tabbarItem.title = "記帳"
-    tabbarItem.image = UIImage(named: "ic_tabbar_manage")
-}
-
-private func settingTabBarItemStyle(_ tabbarItem: UITabBarItem?) {
-    guard let tabbarItem else { return }
-    tabbarItem.title = "設定"
-    tabbarItem.image = UIImage(systemName: "slider.horizontal.3")
+// MARK: - KKTabBarViewDelegate
+extension RootTabBarViewController: KKTabBarViewDelegate {
+    
+    func kkTabBarDidTap(tabBar: TabBarItem, at atIndex: Int) {
+        viewStore.send(.selectedIndex(atIndex))
+    }
 }

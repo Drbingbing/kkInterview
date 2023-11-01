@@ -78,3 +78,18 @@ extension UIColor {
         return UIColor(red: 249/255, green: 178/255, blue: 220/255, alpha: 1)
     }
 }
+
+// MARK: - UIColor
+extension UIColor {
+    
+    /// r: 201, g: 201, b: 201
+    static var pinkishGray: UIColor {
+        return UIColor(red: 201/255, green: 201/255, blue: 201/255, alpha: 1)
+    }
+    
+    /// r: 239, g: 239, b: 239
+    static var brownGray: UIColor {
+        return UIColor(red: 153/255, green: 153/255, blue: 153/255, alpha: 1)
+    }
+    
+}

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30B56CA82AF236B30060F559 /* TabBarPanelLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B56CA72AF236B30060F559 /* TabBarPanelLayout.swift */; };
+		30B56CAA2AF237870060F559 /* KKTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B56CA92AF237870060F559 /* KKTabBarView.swift */; };
+		30B56CAF2AF242DE0060F559 /* InterviewEpisode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B56CAE2AF242DE0060F559 /* InterviewEpisode.swift */; };
 		30C6891A2AF0D3AF00C54250 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689192AF0D3AF00C54250 /* AppDelegate.swift */; };
 		30C6891C2AF0D3AF00C54250 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6891B2AF0D3AF00C54250 /* SceneDelegate.swift */; };
 		30C689212AF0D3AF00C54250 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C6891F2AF0D3AF00C54250 /* Main.storyboard */; };
@@ -23,17 +26,27 @@
 		30C6895D2AF0E69800C54250 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6895C2AF0E69800C54250 /* FriendsViewController.swift */; };
 		30C689602AF0E7D900C54250 /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = 30C6895F2AF0E7D900C54250 /* FloatingPanel */; };
 		30C689652AF0E83800C54250 /* UIComponent in Frameworks */ = {isa = PBXBuildFile; productRef = 30C689642AF0E83800C54250 /* UIComponent */; };
-		30C689672AF0E86700C54250 /* NavigationHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689662AF0E86700C54250 /* NavigationHeaderViewController.swift */; };
+		30C689672AF0E86700C54250 /* FloatingContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689662AF0E86700C54250 /* FloatingContentViewController.swift */; };
 		30C689692AF0E8F400C54250 /* NavigationHeaderPanelLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689682AF0E8F400C54250 /* NavigationHeaderPanelLayout.swift */; };
 		30C6896C2AF0EE6B00C54250 /* PersonalInfoComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6896B2AF0EE6B00C54250 /* PersonalInfoComponent.swift */; };
 		30C6896E2AF0EF9600C54250 /* FriendPageComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6896D2AF0EF9600C54250 /* FriendPageComponent.swift */; };
 		30C689702AF0F02300C54250 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6896F2AF0F02300C54250 /* Font.swift */; };
 		30C689722AF0F25300C54250 /* EmptyFriendsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689712AF0F25300C54250 /* EmptyFriendsComponent.swift */; };
 		30C689742AF0FC6100C54250 /* LinearGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689732AF0FC6100C54250 /* LinearGradient.swift */; };
-		30C689762AF0FFC400C54250 /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689752AF0FFC400C54250 /* ColorView.swift */; };
 		30C689782AF1010800C54250 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689772AF1010800C54250 /* Color.swift */; };
 		30C6897A2AF101EE00C54250 /* FriendsPageIndicatorComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689792AF101EE00C54250 /* FriendsPageIndicatorComponent.swift */; };
 		30C6897C2AF102C200C54250 /* FriendListComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6897B2AF102C200C54250 /* FriendListComponent.swift */; };
+		30C6897E2AF1D6BE00C54250 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6897D2AF1D6BE00C54250 /* Route.swift */; };
+		30C689812AF1D73600C54250 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689802AF1D73600C54250 /* HttpMethod.swift */; };
+		30C689832AF1D78D00C54250 /* Service+RequestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689822AF1D78D00C54250 /* Service+RequestHelpers.swift */; };
+		30C689862AF1D8F000C54250 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689852AF1D8F000C54250 /* User.swift */; };
+		30C689892AF1DB7B00C54250 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689882AF1DB7B00C54250 /* Environment.swift */; };
+		30C6898B2AF1DC5B00C54250 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6898A2AF1DC5B00C54250 /* AppEnvironment.swift */; };
+		30C6898D2AF1E0FF00C54250 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6898C2AF1E0FF00C54250 /* Notifications.swift */; };
+		30C689902AF1E1FB00C54250 /* FriendsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6898F2AF1E1FB00C54250 /* FriendsStore.swift */; };
+		30C689922AF1E58500C54250 /* ServiceMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689912AF1E58500C54250 /* ServiceMonitor.swift */; };
+		30C689942AF1EE1B00C54250 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689932AF1EE1B00C54250 /* Person.swift */; };
+		30C689962AF1FA2700C54250 /* Extension+Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689952AF1FA2700C54250 /* Extension+Sequence.swift */; };
 		44F73FB82AF1395D0073E499 /* SearchBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F73FB72AF1395D0073E499 /* SearchBarComponent.swift */; };
 		44F73FBA2AF13EC80073E499 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F73FB92AF13EC80073E499 /* SearchBarView.swift */; };
 		44F73FBC2AF1418F0073E499 /* FriendsInvitationComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F73FBB2AF1418F0073E499 /* FriendsInvitationComponent.swift */; };
@@ -103,6 +116,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		30B56CA72AF236B30060F559 /* TabBarPanelLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPanelLayout.swift; sourceTree = "<group>"; };
+		30B56CA92AF237870060F559 /* KKTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKTabBarView.swift; sourceTree = "<group>"; };
+		30B56CAE2AF242DE0060F559 /* InterviewEpisode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewEpisode.swift; sourceTree = "<group>"; };
 		30C689162AF0D3AF00C54250 /* KKInterview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KKInterview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C689192AF0D3AF00C54250 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30C6891B2AF0D3AF00C54250 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,17 +136,27 @@
 		30C689552AF0DCCD00C54250 /* RootViewControllerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewControllerData.swift; sourceTree = "<group>"; };
 		30C689582AF0E54900C54250 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		30C6895C2AF0E69800C54250 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
-		30C689662AF0E86700C54250 /* NavigationHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHeaderViewController.swift; sourceTree = "<group>"; };
+		30C689662AF0E86700C54250 /* FloatingContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingContentViewController.swift; sourceTree = "<group>"; };
 		30C689682AF0E8F400C54250 /* NavigationHeaderPanelLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHeaderPanelLayout.swift; sourceTree = "<group>"; };
 		30C6896B2AF0EE6B00C54250 /* PersonalInfoComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoComponent.swift; sourceTree = "<group>"; };
 		30C6896D2AF0EF9600C54250 /* FriendPageComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendPageComponent.swift; sourceTree = "<group>"; };
 		30C6896F2AF0F02300C54250 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		30C689712AF0F25300C54250 /* EmptyFriendsComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyFriendsComponent.swift; sourceTree = "<group>"; };
 		30C689732AF0FC6100C54250 /* LinearGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearGradient.swift; sourceTree = "<group>"; };
-		30C689752AF0FFC400C54250 /* ColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
 		30C689772AF1010800C54250 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		30C689792AF101EE00C54250 /* FriendsPageIndicatorComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsPageIndicatorComponent.swift; sourceTree = "<group>"; };
 		30C6897B2AF102C200C54250 /* FriendListComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListComponent.swift; sourceTree = "<group>"; };
+		30C6897D2AF1D6BE00C54250 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		30C689802AF1D73600C54250 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
+		30C689822AF1D78D00C54250 /* Service+RequestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Service+RequestHelpers.swift"; sourceTree = "<group>"; };
+		30C689852AF1D8F000C54250 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		30C689882AF1DB7B00C54250 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		30C6898A2AF1DC5B00C54250 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		30C6898C2AF1E0FF00C54250 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		30C6898F2AF1E1FB00C54250 /* FriendsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsStore.swift; sourceTree = "<group>"; };
+		30C689912AF1E58500C54250 /* ServiceMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceMonitor.swift; sourceTree = "<group>"; };
+		30C689932AF1EE1B00C54250 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		30C689952AF1FA2700C54250 /* Extension+Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Sequence.swift"; sourceTree = "<group>"; };
 		44F73FB72AF1395D0073E499 /* SearchBarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarComponent.swift; sourceTree = "<group>"; };
 		44F73FB92AF13EC80073E499 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		44F73FBB2AF1418F0073E499 /* FriendsInvitationComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsInvitationComponent.swift; sourceTree = "<group>"; };
@@ -190,6 +216,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30B56CAD2AF242AF0060F559 /* Episode */ = {
+			isa = PBXGroup;
+			children = (
+				30B56CAE2AF242DE0060F559 /* InterviewEpisode.swift */,
+			);
+			path = Episode;
+			sourceTree = "<group>";
+		};
 		30C6890D2AF0D3AF00C54250 = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +233,7 @@
 				44F73FC82AF14E110073E499 /* KKLibrary */,
 				44F73FD62AF14E110073E499 /* KKLibraryTests */,
 				30C689172AF0D3AF00C54250 /* Products */,
+				30C689982AF1FC0000C54250 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -217,7 +252,8 @@
 		30C689182AF0D3AF00C54250 /* KKInterview */ = {
 			isa = PBXGroup;
 			children = (
-				44F73FC12AF14DEB0073E499 /* System */,
+				30B56CAD2AF242AF0060F559 /* Episode */,
+				30C689872AF1DB2A00C54250 /* Library */,
 				30C689572AF0E54100C54250 /* Shared */,
 				30C6895A2AF0E66700C54250 /* Features */,
 				30C689192AF0D3AF00C54250 /* AppDelegate.swift */,
@@ -250,6 +286,7 @@
 		30C6894C2AF0D42500C54250 /* Friends */ = {
 			isa = PBXGroup;
 			children = (
+				30C6898E2AF1E16900C54250 /* Stores */,
 				30C6896A2AF0EE5800C54250 /* Views */,
 				30C6895B2AF0E68000C54250 /* ViewControllers */,
 			);
@@ -293,16 +330,18 @@
 		30C689572AF0E54100C54250 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				30C689662AF0E86700C54250 /* NavigationHeaderViewController.swift */,
+				30C689662AF0E86700C54250 /* FloatingContentViewController.swift */,
 				30C689582AF0E54900C54250 /* Colors.swift */,
 				30C689682AF0E8F400C54250 /* NavigationHeaderPanelLayout.swift */,
 				30C6896F2AF0F02300C54250 /* Font.swift */,
 				30C689732AF0FC6100C54250 /* LinearGradient.swift */,
-				30C689752AF0FFC400C54250 /* ColorView.swift */,
 				30C689772AF1010800C54250 /* Color.swift */,
 				44F73FB92AF13EC80073E499 /* SearchBarView.swift */,
 				44F73FBD2AF143DE0073E499 /* Extension+Component.swift */,
 				44F73FBF2AF149B00073E499 /* Extension+String.swift */,
+				30C689952AF1FA2700C54250 /* Extension+Sequence.swift */,
+				30B56CA72AF236B30060F559 /* TabBarPanelLayout.swift */,
+				30B56CA92AF237870060F559 /* KKTabBarView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -338,21 +377,61 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		44F73FC12AF14DEB0073E499 /* System */ = {
+		30C6897F2AF1D72300C54250 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				30C6897D2AF1D6BE00C54250 /* Route.swift */,
+				30C689802AF1D73600C54250 /* HttpMethod.swift */,
+				30C689912AF1E58500C54250 /* ServiceMonitor.swift */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		30C689842AF1D8E900C54250 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				30C689852AF1D8F000C54250 /* User.swift */,
+				30C689932AF1EE1B00C54250 /* Person.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		30C689872AF1DB2A00C54250 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				30C689882AF1DB7B00C54250 /* Environment.swift */,
+				30C6898A2AF1DC5B00C54250 /* AppEnvironment.swift */,
+				30C6898C2AF1E0FF00C54250 /* Notifications.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		30C6898E2AF1E16900C54250 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				30C6898F2AF1E1FB00C54250 /* FriendsStore.swift */,
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
+		30C689982AF1FC0000C54250 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = System;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		44F73FC82AF14E110073E499 /* KKLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				30C689842AF1D8E900C54250 /* models */,
+				30C6897F2AF1D72300C54250 /* lib */,
 				44F73FC92AF14E110073E499 /* KKLibrary.h */,
 				44F73FCA2AF14E110073E499 /* KKLibrary.docc */,
 				44F73FE52AF14E6F0073E499 /* KKServiceProtocol.swift */,
 				44F73FE72AF14FAC0073E499 /* ServerConfig.swift */,
 				44F73FE92AF150F80073E499 /* KKService.swift */,
+				30C689822AF1D78D00C54250 /* Service+RequestHelpers.swift */,
 			);
 			path = KKLibrary;
 			sourceTree = "<group>";
@@ -580,27 +659,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				44F73FBA2AF13EC80073E499 /* SearchBarView.swift in Sources */,
+				30C689892AF1DB7B00C54250 /* Environment.swift in Sources */,
 				30C689502AF0D63D00C54250 /* RootTabBarViewController.swift in Sources */,
 				30C6897A2AF101EE00C54250 /* FriendsPageIndicatorComponent.swift in Sources */,
 				44F73FBC2AF1418F0073E499 /* FriendsInvitationComponent.swift in Sources */,
+				30B56CAF2AF242DE0060F559 /* InterviewEpisode.swift in Sources */,
 				30C6896C2AF0EE6B00C54250 /* PersonalInfoComponent.swift in Sources */,
 				30C689562AF0DCCD00C54250 /* RootViewControllerData.swift in Sources */,
 				30C6896E2AF0EF9600C54250 /* FriendPageComponent.swift in Sources */,
 				30C689592AF0E54900C54250 /* Colors.swift in Sources */,
 				30C689782AF1010800C54250 /* Color.swift in Sources */,
+				30C689962AF1FA2700C54250 /* Extension+Sequence.swift in Sources */,
 				30C689722AF0F25300C54250 /* EmptyFriendsComponent.swift in Sources */,
 				30C689692AF0E8F400C54250 /* NavigationHeaderPanelLayout.swift in Sources */,
 				30C689742AF0FC6100C54250 /* LinearGradient.swift in Sources */,
 				30C6891A2AF0D3AF00C54250 /* AppDelegate.swift in Sources */,
-				30C689762AF0FFC400C54250 /* ColorView.swift in Sources */,
 				30C6895D2AF0E69800C54250 /* FriendsViewController.swift in Sources */,
+				30B56CA82AF236B30060F559 /* TabBarPanelLayout.swift in Sources */,
 				44F73FC02AF149B00073E499 /* Extension+String.swift in Sources */,
 				44F73FBE2AF143DE0073E499 /* Extension+Component.swift in Sources */,
+				30B56CAA2AF237870060F559 /* KKTabBarView.swift in Sources */,
+				30C6898D2AF1E0FF00C54250 /* Notifications.swift in Sources */,
 				30C689702AF0F02300C54250 /* Font.swift in Sources */,
 				30C689532AF0D67000C54250 /* RootTabBarStore.swift in Sources */,
+				30C6898B2AF1DC5B00C54250 /* AppEnvironment.swift in Sources */,
 				30C6897C2AF102C200C54250 /* FriendListComponent.swift in Sources */,
+				30C689902AF1E1FB00C54250 /* FriendsStore.swift in Sources */,
 				30C6891C2AF0D3AF00C54250 /* SceneDelegate.swift in Sources */,
-				30C689672AF0E86700C54250 /* NavigationHeaderViewController.swift in Sources */,
+				30C689672AF0E86700C54250 /* FloatingContentViewController.swift in Sources */,
 				44F73FB82AF1395D0073E499 /* SearchBarComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -626,9 +712,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30C689942AF1EE1B00C54250 /* Person.swift in Sources */,
 				44F73FE62AF14E6F0073E499 /* KKServiceProtocol.swift in Sources */,
 				44F73FEA2AF150F80073E499 /* KKService.swift in Sources */,
 				44F73FE82AF14FAC0073E499 /* ServerConfig.swift in Sources */,
+				30C6897E2AF1D6BE00C54250 /* Route.swift in Sources */,
+				30C689862AF1D8F000C54250 /* User.swift in Sources */,
+				30C689922AF1E58500C54250 /* ServiceMonitor.swift in Sources */,
+				30C689812AF1D73600C54250 /* HttpMethod.swift in Sources */,
+				30C689832AF1D78D00C54250 /* Service+RequestHelpers.swift in Sources */,
 				44F73FCB2AF14E110073E499 /* KKLibrary.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,6 +16,7 @@ struct FriendPageComponent: ComponentBuilder {
         HStack(spacing: 36) {
             Text("好友", font: .medium(size: 13))
                 .textColor(.primaryLabel)
+                .tappableView {}
                 .badge(
                     verticalAlignment: .before,
                     horizontalAlignment: .after,
@@ -25,6 +26,7 @@ struct FriendPageComponent: ComponentBuilder {
                 }
             Text("聊天", font: .medium(size: 13))
                 .textColor(.primaryLabel)
+                .tappableView {}
                 .badge(
                     verticalAlignment: .before,
                     horizontalAlignment: .after,

@@ -7,26 +7,38 @@
 
 import UIKit
 import UIComponent
+import KKLibrary
 
 struct PersonalInfoComponent: ComponentBuilder {
     
+    var user: User?
     
     func build() -> Component {
         HStack {
             VStack(spacing: 8) {
-                Text("紫晽", font: .medium(size: 17))
+                Text(user?.name ?? "", font: .medium(size: 17))
                     .textColor(.primaryLabel)
                 HStack(alignItems: .center) {
-                    Text("設定KOKO ID", font: .regular(size: 13))
-                        .textColor(.primaryLabel)
+                    if let user {
+                        Text("KOKO ID：\(user.kokoID)", font: .regular(size: 13))
+                            .textColor(.primaryLabel)
+                    } else {
+                        Text("設定KOKO ID", font: .regular(size: 13))
+                            .textColor(.primaryLabel)
+                    }
+                    
                     Image("arrow_right_deep_gray")
-                    Space(width: 15)
-                    Color(.primaryTintColor, radius: 5)
-                        .size(width: 10, height: 10)
+                    if user == nil {
+                        Space(width: 15)
+                        Color(.primaryTintColor, radius: 5)
+                            .size(width: 10, height: 10)
+                    }
                 }
+                .tappableView {}
             }
             .flex()
             Image("img_friends_female_default")
+                .tappableView {}
         }
         .inset(h: 30)
         .view()
