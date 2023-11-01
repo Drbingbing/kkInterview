@@ -7,9 +7,9 @@
 
 import Foundation
 
-enum InterviewEpisode {
+public enum InterviewEpisode: String {
     
-    case episode1
-    case episode2
-    case episode3
+    case episode1 = "1"
+    case episode2 = "2"
+    case episode3 = "3"
 }

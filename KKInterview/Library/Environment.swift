@@ -16,11 +16,16 @@ public struct Environment {
     /// The currently logged in user.
     public let currentUser: User?
     
+    /// The current episode.
+    public let episode: InterviewEpisode
+    
     init(
         apiService: KKServiceProtocol = KKService(),
-        currentUser: User? = nil
+        currentUser: User? = nil,
+        episode: InterviewEpisode = .episode1
     ) {
         self.apiService = apiService
         self.currentUser = currentUser
+        self.episode = episode
     }
 }

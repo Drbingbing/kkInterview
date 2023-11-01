@@ -7,13 +7,13 @@
 
 import UIKit
 
-extension UIFont {
+public extension UIFont {
     
-    static func regular(size: CGFloat = 14) -> UIFont {
+    public static func regular(size: CGFloat = 14) -> UIFont {
         return .preferredFont(style: .body, size: size)
     }
     
-    static func medium(size: CGFloat = 14) -> UIFont {
+    public static func medium(size: CGFloat = 14) -> UIFont {
         return .preferredFont(style: .body, size: size)
     }
     

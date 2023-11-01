@@ -11,6 +11,7 @@ import ComposableArchitecture
 import UIComponent
 import Combine
 import KKLibrary
+import KKUILibrary
 
 final class FriendsViewController: UIViewController {
     
@@ -95,7 +96,7 @@ final class FriendsViewController: UIViewController {
                 isRefreshing ? self?.refreshControl.beginRefreshing() : self?.refreshControl.endRefreshing()
             }
             .store(in: &cancellable)
-        viewStore.publisher.isCollapse
+        viewStore.publisher.isStacked
             .removeDuplicates()
             .sink { [weak self] _ in
                 guard let self else { return }
@@ -126,12 +127,15 @@ final class FriendsViewController: UIViewController {
         
         content.component = HStack(spacing: 24) {
             Image("ic_nav_pink_withdraw")
-                .tappableView {}
+                .tappableView { [weak self] in
+                    let vc = AddContactViewController()
+                    self?.tabBarController?.navigationController?.pushViewController(vc, animated: true)
+                }
             Image("ic_nav_pink_transfer")
-                .tappableView {}
+                .tappableView { }
             Space().flex()
             Image("ic_navpink_scan")
-                .tappableView {}
+                .tappableView { }
         }
         .inset(h: 20)
     }
@@ -166,7 +170,7 @@ final class FriendsViewController: UIViewController {
         VStack {
             if !viewStore.showKeyboard {
                 PersonalInfoComponent(user: viewStore.currentUser)
-                FriendsInvitationComponent(persons: viewStore.invitations, isExpand: viewStore.isCollapse) { [weak self] person in
+                FriendsInvitationComponent(persons: viewStore.invitations, isStacked: viewStore.isStacked) { [weak self] person in
                     self?.viewStore.send(.invitationTapped(person))
                 }
                 FriendPageComponent()

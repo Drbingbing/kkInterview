@@ -7,9 +7,9 @@
 
 import Foundation
 
-typealias RootViewControllerIndex = Int
+public typealias RootViewControllerIndex = Int
 
-enum RootViewControllerData: Equatable {
+public enum RootViewControllerData: Equatable {
     case wallets
     case friends
     case home
@@ -17,7 +17,7 @@ enum RootViewControllerData: Equatable {
     case setting
 }
 
-enum TabBarItem: Equatable {
+public enum TabBarItem: Equatable {
     case wallets(index: RootViewControllerIndex)
     case friends(index: RootViewControllerIndex)
     case home(index: RootViewControllerIndex)
@@ -25,6 +25,10 @@ enum TabBarItem: Equatable {
     case setting(index: RootViewControllerIndex)
 }
 
-struct TabBarItemsData: Equatable {
-    let items: [TabBarItem]
+public struct TabBarItemsData: Equatable {
+    public let items: [TabBarItem]
+    
+    public init(items: [TabBarItem]) {
+        self.items = items
+    }
 }

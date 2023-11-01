@@ -7,6 +7,7 @@
 
 import UIKit
 import UIComponent
+import KKUILibrary
 
 struct FriendsPageIndicatorComponent: ComponentBuilder {
     

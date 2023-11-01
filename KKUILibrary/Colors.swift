@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UIColor {
+public extension UIColor {
     
     /// major app color
     static var primaryTintColor: UIColor {
@@ -17,7 +17,7 @@ extension UIColor {
 
 
 // MARK: - Separator
-extension UIColor {
+public extension UIColor {
     
     /// r: 239, g: 239, b: 239
     static var primarySeparator: UIColor {
@@ -31,7 +31,7 @@ extension UIColor {
 }
 
 // MARK: - Bacground
-extension UIColor {
+public extension UIColor {
     
     /// r: 252, g: 252, b: 252
     static var background1: UIColor {
@@ -41,22 +41,17 @@ extension UIColor {
 
 
 // MARK: - Label
-extension UIColor {
+public extension UIColor {
     
     /// r: 71, g: 71, b: 71
     static var primaryLabel: UIColor {
         return UIColor(red: 71/255, green: 71/255, blue: 71/255, alpha: 1)
     }
-    
-    /// r: 153, g: 153, b: 153
-    static var secondaryLabel: UIColor {
-        return UIColor(red: 153/255, green: 153/255, blue: 153/255, alpha: 1)
-    }
 }
 
 
 // MARK: - Green
-extension UIColor {
+public extension UIColor {
     
     /// r: 86, g: 179, b: 11
     static var frogGreen: UIColor {
@@ -71,7 +66,7 @@ extension UIColor {
 
 
 // MARK: - Pink
-extension UIColor {
+public extension UIColor {
     
     /// r: 249, g: 178, b: 220
     static var softPink: UIColor {
@@ -80,14 +75,14 @@ extension UIColor {
 }
 
 // MARK: - UIColor
-extension UIColor {
+public extension UIColor {
     
     /// r: 201, g: 201, b: 201
     static var pinkishGray: UIColor {
         return UIColor(red: 201/255, green: 201/255, blue: 201/255, alpha: 1)
     }
     
-    /// r: 239, g: 239, b: 239
+    /// r: 153, g: 153, b: 153
     static var brownGray: UIColor {
         return UIColor(red: 153/255, green: 153/255, blue: 153/255, alpha: 1)
     }

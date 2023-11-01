@@ -8,12 +8,11 @@
 import UIKit
 import UIComponent
 
-extension Component {
+public extension Component {
     
     func shadow() -> ViewUpdateComponent<ComponentViewComponent<ComponentView>> {
         view()
             .update {
-                $0.backgroundColor = .systemBackground
                 $0.layer.shadowColor = UIColor.black.withAlphaComponent(0.1).cgColor
                 $0.layer.shadowOffset = CGSize(width: 0, height: 4)
                 $0.layer.shadowRadius = 8

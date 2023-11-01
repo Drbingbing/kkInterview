@@ -8,6 +8,7 @@
 import UIKit
 import UIComponent
 import BaseToolbox
+import KKUILibrary
 
 struct EmptyFriendsComponent: ComponentBuilder {
     
@@ -20,7 +21,7 @@ struct EmptyFriendsComponent: ComponentBuilder {
                 .textColor(.primaryLabel)
             Space(height: 8)
             Text("與好友們一起用 KOKO 聊起來！\n還能互相收付款、發紅包喔：）", font: .regular())
-                .textColor(.secondaryLabel)
+                .textColor(.brownGray)
             Space(height: 25)
             LinearGradient(colors: [.frogGreen, .boogerGreen])
                 .size(width: 192, height: 40)
@@ -35,7 +36,7 @@ struct EmptyFriendsComponent: ComponentBuilder {
             Space(height: 37)
             HStack(alignItems: .center) {
                 Text("幫助好友更快找到你？", font: .regular(size: 13))
-                    .textColor(.secondaryLabel)
+                    .textColor(.brownGray)
                 Text(
                     attributedString: NSAttributedString(
                         string: "設定 KOKO ID",

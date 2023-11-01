@@ -23,10 +23,15 @@ struct AppEnvironment {
     
     static func replaceCurrentEnvironment(
         apiService: KKServiceProtocol = AppEnvironment.current.apiService,
-        currentUser: User? = AppEnvironment.current.currentUser
+        currentUser: User? = AppEnvironment.current.currentUser,
+        episode: InterviewEpisode = AppEnvironment.current.episode
     ) {
         replaceCurrentEnvironment(
-            Environment(apiService: apiService, currentUser: currentUser)
+            Environment(
+                apiService: apiService, 
+                currentUser: currentUser,
+                episode: episode
+            )
         )
     }
     

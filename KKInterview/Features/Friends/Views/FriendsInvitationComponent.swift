@@ -12,37 +12,31 @@ import KKLibrary
 struct FriendsInvitationComponent: ComponentBuilder {
     
     var persons: [Person] = []
-    var isExpand: Bool = false
+    var isStacked: Bool = false
     var onTap: (Person) -> Void
     
     func build() -> Component {
-        if isExpand {
-            VStack(spacing: 10) {
-                ForEach(persons.reversed().enumerated()) { index, person in
-                    InvitationComponent(person: person)
-                        .tappableView {
-                            onTap(person)
-                        }
-                }
+        VStack(spacing: 10) {
+            ForEach(persons.enumerated()) { index, person in
+                let yOffset: CGFloat = (isStacked ? 60 : 0) * CGFloat(-index)
+                InvitationComponent(person: person)
+                    .tappableView {
+                        onTap(person)
+                    }
+                    .zPosition(isStacked ? CGFloat(persons.count - index) : 1)
+                    .offset(y: yOffset)
+                    .inset(h: isStacked ? CGFloat(index) * 10 : 0)
             }
-            .inset(top: persons.isEmpty ? 15 : 30, left: 30, bottom: persons.isEmpty ? 15 : 30, right: 30)
-            .view()
-            .backgroundColor(.background1)
-        } else {
-            ZStack {
-                ForEach(persons.reversed().enumerated()) { index, person in
-                    InvitationComponent(person: person)
-                        .tappableView {
-                            onTap(person)
-                        }
-                        .offset(y: isExpand ? CGFloat(index) * -70 : CGFloat(index) * -12)
-                        .inset(h: isExpand ? 0 : CGFloat(persons.count - index) * 10)
-                }
-            }
-            .inset(top: persons.isEmpty ? 15 : 18 + CGFloat(persons.count) * 12, left: 30, bottom: persons.isEmpty ? 15 : 30, right: 30)
-            .view()
-            .backgroundColor(.background1)
         }
+        .inset(
+            top: persons.isEmpty ? 15 : 30,
+            left: 30,
+            bottom: persons.isEmpty ? 15 : 30 - (isStacked ? CGFloat(persons.count - 1) * 60 : 0),
+            right: 30
+        )
+        .view()
+        .backgroundColor(.background1)
+        .animator(AnimatedReloadAnimator())
     }
 }
 
@@ -58,7 +52,7 @@ private struct InvitationComponent: ComponentBuilder {
                 Text(person.name, font: .regular(size: 16))
                     .textColor(.primaryLabel)
                 Text("邀請你成為好友：）", font: .regular(size: 13))
-                    .textColor(.secondaryLabel)
+                    .textColor(.brownGray)
             }
             .flex()
             HStack(spacing: 15, alignItems: .center) {
@@ -67,7 +61,9 @@ private struct InvitationComponent: ComponentBuilder {
             }
         }
         .inset(15)
-        .shadow()
+        .view()
+        .backgroundColor(.white)
         .cornerRadius(6)
+        .shadow()
     }
 }

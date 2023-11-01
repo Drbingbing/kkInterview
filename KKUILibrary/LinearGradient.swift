@@ -7,29 +7,29 @@
 
 import UIKit
 
-final class LinearGradient: UIView {
+public final class LinearGradient: UIView {
     
     private let gradientLayer = CAGradientLayer()
     
-    convenience init(colors: [UIColor]) {
+    public convenience init(colors: [UIColor]) {
         self.init(frame: .zero)
         gradientLayer.colors = colors.map { $0.cgColor }
         gradientLayer.startPoint = CGPoint(x: 0, y: 0.5)
         gradientLayer.endPoint = CGPoint(x: 1, y: 0.5)
     }
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         layer.addSublayer(gradientLayer)
     }
     
-    override func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
         gradientLayer.frame = bounds
         gradientLayer.cornerRadius = bounds.height / 2
     }
     
-    required init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }

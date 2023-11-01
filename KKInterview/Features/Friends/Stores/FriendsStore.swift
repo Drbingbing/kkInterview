@@ -24,7 +24,7 @@ struct FriendsStore: Reducer {
         var showKeyboard: Bool = false
         var filterList: [Person]? = nil
         var isRefreshing: Bool = false
-        var isCollapse: Bool = false
+        var isStacked: Bool = true
     }
     
     enum Action {
@@ -47,14 +47,21 @@ struct FriendsStore: Reducer {
             case .viewDidLoad:
                 switch episode {
                 case .episode1:
-                    return .run { await $0(.friendListResponse(TaskResult { try await AppEnvironment.current.apiService.friendList(page: 4) })) }
+                    return .concatenate(
+                        .run { await $0(.friendListResponse(TaskResult { try await AppEnvironment.current.apiService.friendList(page: 4) })) },
+                        .send(.currentUserUpdated)
+                    )
                 case .episode2:
                     return .concatenate(
                         .run { await $0(.friendListResponse(TaskResult { try await AppEnvironment.current.apiService.friendList(page: 1) })) },
-                        .run { await $0(.friendListResponse(TaskResult { try await AppEnvironment.current.apiService.friendList(page: 2) })) }
+                        .run { await $0(.friendListResponse(TaskResult { try await AppEnvironment.current.apiService.friendList(page: 2) })) },
+                        .send(.currentUserUpdated)
                     )
                 case .episode3:
-                    return .run { await $0(.friendListResponse(TaskResult { try await AppEnvironment.current.apiService.friendList(page: 3) })) }
+                    return .concatenate(
+                        .run { await $0(.friendListResponse(TaskResult { try await AppEnvironment.current.apiService.friendList(page: 3) })) },
+                        .send(.currentUserUpdated)
+                    )
                 }
                 
             case let .friendListResponse(.success(person)):
@@ -93,7 +100,7 @@ struct FriendsStore: Reducer {
                 state.isRefreshing = true
                 return .send(.viewDidLoad)
             case .invitationTapped:
-                state.isCollapse.toggle()
+                state.isStacked.toggle()
                 return .none
             }
         }

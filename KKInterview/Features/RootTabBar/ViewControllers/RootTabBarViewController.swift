@@ -8,6 +8,7 @@
 import UIKit
 import ComposableArchitecture
 import Combine
+import KKUILibrary
 
 final class RootTabBarViewController: UITabBarController {
     
@@ -34,6 +35,11 @@ final class RootTabBarViewController: UITabBarController {
         setupCustomTabBar()
         
         viewStore.send(.viewDidLoad)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     override func viewDidLayoutSubviews() {
@@ -71,13 +77,14 @@ final class RootTabBarViewController: UITabBarController {
         viewStore.publisher.tabBarItemsData
             .removeDuplicates()
             .sink { [weak self] tabBarItemsData in
-                self?.setTabBarItemStyles(tabBarItemsData)
+                self?.setTabBarItemStyles()
             }
             .store(in: &cancallable)
         viewStore.publisher.selectedIndex
             .removeDuplicates()
             .sink { [weak self] selectedIndex in
                 self?.selectedIndex = selectedIndex
+                self?.setTabBarItemStyles()
             }
             .store(in: &cancallable)
         viewStore.publisher.currentUser
@@ -89,20 +96,20 @@ final class RootTabBarViewController: UITabBarController {
             .store(in: &cancallable)
     }
     
-    private func setTabBarItemStyles(_ tabBarItemsData: TabBarItemsData) {
-        kkTabBar.populate(tabBarItemData: tabBarItemsData)
+    private func setTabBarItemStyles() {
+        kkTabBar.populate(tabBarItemData: viewStore.tabBarItemsData, selectedIndex: viewStore.selectedIndex)
     }
     
     fileprivate static func viewController(from viewControllerData: RootViewControllerData) -> UIViewController {
         switch viewControllerData {
         case .wallets:
-            return FriendsViewController(episode: .episode1)
+            return UIViewController()
         case .friends:
-            return FriendsViewController(episode: .episode2)
+            return FriendsViewController(episode: AppEnvironment.current.episode)
         case .home:
             return UIViewController()
         case .management:
-            return FriendsViewController(episode: .episode3)
+            return UIViewController()
         case .setting:
             return UIViewController()
         }

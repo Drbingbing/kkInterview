@@ -9,7 +9,7 @@ import Foundation
 
 extension Array {
     
-    func merge(
+    public func merge(
         _ collection: [Element],
         on projection: (Element, Element) -> Bool,
         uniquingKeysWith combine: (Element, Element) -> Element

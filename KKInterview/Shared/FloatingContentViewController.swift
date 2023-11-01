@@ -8,23 +8,23 @@
 import UIKit
 import UIComponent
 
-final class FloatingContentViewController: UIViewController {
+public final class FloatingContentViewController: UIViewController {
     
     private let componentView = ComponentScrollView()
     
-    var component: Component? {
+    public var component: Component? {
         get { componentView.component }
         set { componentView.component = newValue }
     }
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         
         view.addSubview(componentView)
         view.backgroundColor = .background1
     }
     
-    override func viewDidLayoutSubviews() {
+    public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         componentView.frame = view.bounds.inset(by: view.safeAreaInsets)
     }

@@ -8,6 +8,7 @@
 import UIKit
 import UIComponent
 import KKLibrary
+import KKUILibrary
 
 struct PersonalInfoComponent: ComponentBuilder {
     

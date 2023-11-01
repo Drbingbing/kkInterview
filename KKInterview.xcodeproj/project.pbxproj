@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		30B56CA82AF236B30060F559 /* TabBarPanelLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B56CA72AF236B30060F559 /* TabBarPanelLayout.swift */; };
-		30B56CAA2AF237870060F559 /* KKTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B56CA92AF237870060F559 /* KKTabBarView.swift */; };
 		30B56CAF2AF242DE0060F559 /* InterviewEpisode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B56CAE2AF242DE0060F559 /* InterviewEpisode.swift */; };
 		30C6891A2AF0D3AF00C54250 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689192AF0D3AF00C54250 /* AppDelegate.swift */; };
 		30C6891C2AF0D3AF00C54250 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6891B2AF0D3AF00C54250 /* SceneDelegate.swift */; };
@@ -21,19 +19,12 @@
 		30C6894B2AF0D41D00C54250 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 30C6894A2AF0D41D00C54250 /* ComposableArchitecture */; };
 		30C689502AF0D63D00C54250 /* RootTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6894F2AF0D63D00C54250 /* RootTabBarViewController.swift */; };
 		30C689532AF0D67000C54250 /* RootTabBarStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689522AF0D67000C54250 /* RootTabBarStore.swift */; };
-		30C689562AF0DCCD00C54250 /* RootViewControllerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689552AF0DCCD00C54250 /* RootViewControllerData.swift */; };
-		30C689592AF0E54900C54250 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689582AF0E54900C54250 /* Colors.swift */; };
 		30C6895D2AF0E69800C54250 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6895C2AF0E69800C54250 /* FriendsViewController.swift */; };
 		30C689602AF0E7D900C54250 /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = 30C6895F2AF0E7D900C54250 /* FloatingPanel */; };
 		30C689652AF0E83800C54250 /* UIComponent in Frameworks */ = {isa = PBXBuildFile; productRef = 30C689642AF0E83800C54250 /* UIComponent */; };
-		30C689672AF0E86700C54250 /* FloatingContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689662AF0E86700C54250 /* FloatingContentViewController.swift */; };
-		30C689692AF0E8F400C54250 /* NavigationHeaderPanelLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689682AF0E8F400C54250 /* NavigationHeaderPanelLayout.swift */; };
 		30C6896C2AF0EE6B00C54250 /* PersonalInfoComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6896B2AF0EE6B00C54250 /* PersonalInfoComponent.swift */; };
 		30C6896E2AF0EF9600C54250 /* FriendPageComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6896D2AF0EF9600C54250 /* FriendPageComponent.swift */; };
-		30C689702AF0F02300C54250 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6896F2AF0F02300C54250 /* Font.swift */; };
 		30C689722AF0F25300C54250 /* EmptyFriendsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689712AF0F25300C54250 /* EmptyFriendsComponent.swift */; };
-		30C689742AF0FC6100C54250 /* LinearGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689732AF0FC6100C54250 /* LinearGradient.swift */; };
-		30C689782AF1010800C54250 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689772AF1010800C54250 /* Color.swift */; };
 		30C6897A2AF101EE00C54250 /* FriendsPageIndicatorComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689792AF101EE00C54250 /* FriendsPageIndicatorComponent.swift */; };
 		30C6897C2AF102C200C54250 /* FriendListComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6897B2AF102C200C54250 /* FriendListComponent.swift */; };
 		30C6897E2AF1D6BE00C54250 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6897D2AF1D6BE00C54250 /* Route.swift */; };
@@ -46,12 +37,7 @@
 		30C689902AF1E1FB00C54250 /* FriendsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6898F2AF1E1FB00C54250 /* FriendsStore.swift */; };
 		30C689922AF1E58500C54250 /* ServiceMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689912AF1E58500C54250 /* ServiceMonitor.swift */; };
 		30C689942AF1EE1B00C54250 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689932AF1EE1B00C54250 /* Person.swift */; };
-		30C689962AF1FA2700C54250 /* Extension+Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689952AF1FA2700C54250 /* Extension+Sequence.swift */; };
-		44F73FB82AF1395D0073E499 /* SearchBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F73FB72AF1395D0073E499 /* SearchBarComponent.swift */; };
-		44F73FBA2AF13EC80073E499 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F73FB92AF13EC80073E499 /* SearchBarView.swift */; };
 		44F73FBC2AF1418F0073E499 /* FriendsInvitationComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F73FBB2AF1418F0073E499 /* FriendsInvitationComponent.swift */; };
-		44F73FBE2AF143DE0073E499 /* Extension+Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F73FBD2AF143DE0073E499 /* Extension+Component.swift */; };
-		44F73FC02AF149B00073E499 /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F73FBF2AF149B00073E499 /* Extension+String.swift */; };
 		44F73FCB2AF14E110073E499 /* KKLibrary.docc in Sources */ = {isa = PBXBuildFile; fileRef = 44F73FCA2AF14E110073E499 /* KKLibrary.docc */; };
 		44F73FD12AF14E110073E499 /* KKLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F73FC72AF14E110073E499 /* KKLibrary.framework */; };
 		44F73FD82AF14E110073E499 /* KKLibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F73FD72AF14E110073E499 /* KKLibraryTests.swift */; };
@@ -61,6 +47,27 @@
 		44F73FE62AF14E6F0073E499 /* KKServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F73FE52AF14E6F0073E499 /* KKServiceProtocol.swift */; };
 		44F73FE82AF14FAC0073E499 /* ServerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F73FE72AF14FAC0073E499 /* ServerConfig.swift */; };
 		44F73FEA2AF150F80073E499 /* KKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F73FE92AF150F80073E499 /* KKService.swift */; };
+		44F73FF32AF298400073E499 /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F73FF22AF298400073E499 /* AddContactViewController.swift */; };
+		44F73FFD2AF29C860073E499 /* KKUILibrary.docc in Sources */ = {isa = PBXBuildFile; fileRef = 44F73FFC2AF29C860073E499 /* KKUILibrary.docc */; };
+		44F740032AF29C860073E499 /* KKUILibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F73FF92AF29C860073E499 /* KKUILibrary.framework */; };
+		44F7400A2AF29C860073E499 /* KKUILibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F740092AF29C860073E499 /* KKUILibraryTests.swift */; };
+		44F7400B2AF29C860073E499 /* KKUILibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 44F73FFB2AF29C860073E499 /* KKUILibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		44F7400E2AF29C860073E499 /* KKUILibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F73FF92AF29C860073E499 /* KKUILibrary.framework */; };
+		44F7400F2AF29C860073E499 /* KKUILibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 44F73FF92AF29C860073E499 /* KKUILibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		44F740182AF29C990073E499 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F73FB92AF13EC80073E499 /* SearchBarView.swift */; };
+		44F740192AF29C990073E499 /* LinearGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689732AF0FC6100C54250 /* LinearGradient.swift */; };
+		44F7401B2AF29C990073E499 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689582AF0E54900C54250 /* Colors.swift */; };
+		44F7401C2AF29C990073E499 /* NavigationHeaderPanelLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689682AF0E8F400C54250 /* NavigationHeaderPanelLayout.swift */; };
+		44F740202AF29C990073E499 /* TabBarPanelLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B56CA72AF236B30060F559 /* TabBarPanelLayout.swift */; };
+		44F740212AF29C990073E499 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6896F2AF0F02300C54250 /* Font.swift */; };
+		44F740242AF29D0C0073E499 /* RootViewControllerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689552AF0DCCD00C54250 /* RootViewControllerData.swift */; };
+		44F740262AF29D7E0073E499 /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = 44F740252AF29D7E0073E499 /* FloatingPanel */; };
+		44F740272AF29DA70073E499 /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F73FBF2AF149B00073E499 /* Extension+String.swift */; };
+		44F740282AF29DA70073E499 /* Extension+Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689952AF1FA2700C54250 /* Extension+Sequence.swift */; };
+		44F7402C2AF2A0DB0073E499 /* FloatingContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689662AF0E86700C54250 /* FloatingContentViewController.swift */; };
+		44F7402D2AF2A0DE0073E499 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689772AF1010800C54250 /* Color.swift */; };
+		44F7402E2AF2A0E10073E499 /* Extension+Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F73FBD2AF143DE0073E499 /* Extension+Component.swift */; };
+		44F7402F2AF2A0E40073E499 /* KKTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B56CA92AF237870060F559 /* KKTabBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +106,27 @@
 			remoteGlobalIDString = 44F73FC62AF14E110073E499;
 			remoteInfo = KKLibrary;
 		};
+		44F740042AF29C860073E499 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30C6890E2AF0D3AF00C54250 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 44F73FF82AF29C860073E499;
+			remoteInfo = KKUILibrary;
+		};
+		44F740062AF29C860073E499 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30C6890E2AF0D3AF00C54250 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 30C689152AF0D3AF00C54250;
+			remoteInfo = KKInterview;
+		};
+		44F7400C2AF29C860073E499 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30C6890E2AF0D3AF00C54250 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 44F73FF82AF29C860073E499;
+			remoteInfo = KKUILibrary;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -108,6 +136,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				44F7400F2AF29C860073E499 /* KKUILibrary.framework in Embed Frameworks */,
 				44F73FDD2AF14E110073E499 /* KKLibrary.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -157,7 +186,6 @@
 		30C689912AF1E58500C54250 /* ServiceMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceMonitor.swift; sourceTree = "<group>"; };
 		30C689932AF1EE1B00C54250 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		30C689952AF1FA2700C54250 /* Extension+Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Sequence.swift"; sourceTree = "<group>"; };
-		44F73FB72AF1395D0073E499 /* SearchBarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarComponent.swift; sourceTree = "<group>"; };
 		44F73FB92AF13EC80073E499 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		44F73FBB2AF1418F0073E499 /* FriendsInvitationComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsInvitationComponent.swift; sourceTree = "<group>"; };
 		44F73FBD2AF143DE0073E499 /* Extension+Component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Component.swift"; sourceTree = "<group>"; };
@@ -170,6 +198,12 @@
 		44F73FE52AF14E6F0073E499 /* KKServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKServiceProtocol.swift; sourceTree = "<group>"; };
 		44F73FE72AF14FAC0073E499 /* ServerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConfig.swift; sourceTree = "<group>"; };
 		44F73FE92AF150F80073E499 /* KKService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKService.swift; sourceTree = "<group>"; };
+		44F73FF22AF298400073E499 /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
+		44F73FF92AF29C860073E499 /* KKUILibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KKUILibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		44F73FFB2AF29C860073E499 /* KKUILibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKUILibrary.h; sourceTree = "<group>"; };
+		44F73FFC2AF29C860073E499 /* KKUILibrary.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = KKUILibrary.docc; sourceTree = "<group>"; };
+		44F740022AF29C860073E499 /* KKUILibraryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KKUILibraryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		44F740092AF29C860073E499 /* KKUILibraryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKUILibraryTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +213,7 @@
 			files = (
 				30C6894B2AF0D41D00C54250 /* ComposableArchitecture in Frameworks */,
 				30C689652AF0E83800C54250 /* UIComponent in Frameworks */,
+				44F7400E2AF29C860073E499 /* KKUILibrary.framework in Frameworks */,
 				44F73FDC2AF14E110073E499 /* KKLibrary.framework in Frameworks */,
 				30C689602AF0E7D900C54250 /* FloatingPanel in Frameworks */,
 			);
@@ -213,6 +248,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		44F73FF62AF29C860073E499 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44F740262AF29D7E0073E499 /* FloatingPanel in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44F73FFF2AF29C860073E499 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44F740032AF29C860073E499 /* KKUILibrary.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -232,6 +283,8 @@
 				30C689392AF0D3B000C54250 /* KKInterviewUITests */,
 				44F73FC82AF14E110073E499 /* KKLibrary */,
 				44F73FD62AF14E110073E499 /* KKLibraryTests */,
+				44F73FFA2AF29C860073E499 /* KKUILibrary */,
+				44F740082AF29C860073E499 /* KKUILibraryTests */,
 				30C689172AF0D3AF00C54250 /* Products */,
 				30C689982AF1FC0000C54250 /* Frameworks */,
 			);
@@ -245,6 +298,8 @@
 				30C689362AF0D3B000C54250 /* KKInterviewUITests.xctest */,
 				44F73FC72AF14E110073E499 /* KKLibrary.framework */,
 				44F73FD02AF14E110073E499 /* KKLibraryTests.xctest */,
+				44F73FF92AF29C860073E499 /* KKUILibrary.framework */,
+				44F740022AF29C860073E499 /* KKUILibraryTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -252,9 +307,9 @@
 		30C689182AF0D3AF00C54250 /* KKInterview */ = {
 			isa = PBXGroup;
 			children = (
+				44F7402B2AF2A05C0073E499 /* Shared */,
 				30B56CAD2AF242AF0060F559 /* Episode */,
 				30C689872AF1DB2A00C54250 /* Library */,
-				30C689572AF0E54100C54250 /* Shared */,
 				30C6895A2AF0E66700C54250 /* Features */,
 				30C689192AF0D3AF00C54250 /* AppDelegate.swift */,
 				30C6891B2AF0D3AF00C54250 /* SceneDelegate.swift */,
@@ -296,7 +351,6 @@
 		30C6894D2AF0D42F00C54250 /* RootTabBar */ = {
 			isa = PBXGroup;
 			children = (
-				30C689542AF0DCBD00C54250 /* Data */,
 				30C689512AF0D66100C54250 /* Stores */,
 				30C6894E2AF0D62700C54250 /* ViewControllers */,
 			);
@@ -319,36 +373,10 @@
 			path = Stores;
 			sourceTree = "<group>";
 		};
-		30C689542AF0DCBD00C54250 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				30C689552AF0DCCD00C54250 /* RootViewControllerData.swift */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		30C689572AF0E54100C54250 /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				30C689662AF0E86700C54250 /* FloatingContentViewController.swift */,
-				30C689582AF0E54900C54250 /* Colors.swift */,
-				30C689682AF0E8F400C54250 /* NavigationHeaderPanelLayout.swift */,
-				30C6896F2AF0F02300C54250 /* Font.swift */,
-				30C689732AF0FC6100C54250 /* LinearGradient.swift */,
-				30C689772AF1010800C54250 /* Color.swift */,
-				44F73FB92AF13EC80073E499 /* SearchBarView.swift */,
-				44F73FBD2AF143DE0073E499 /* Extension+Component.swift */,
-				44F73FBF2AF149B00073E499 /* Extension+String.swift */,
-				30C689952AF1FA2700C54250 /* Extension+Sequence.swift */,
-				30B56CA72AF236B30060F559 /* TabBarPanelLayout.swift */,
-				30B56CA92AF237870060F559 /* KKTabBarView.swift */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
 		30C6895A2AF0E66700C54250 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				44F73FF02AF298250073E499 /* AddContact */,
 				30C6894D2AF0D42F00C54250 /* RootTabBar */,
 				30C6894C2AF0D42500C54250 /* Friends */,
 			);
@@ -371,7 +399,6 @@
 				30C689712AF0F25300C54250 /* EmptyFriendsComponent.swift */,
 				30C689792AF101EE00C54250 /* FriendsPageIndicatorComponent.swift */,
 				30C6897B2AF102C200C54250 /* FriendListComponent.swift */,
-				44F73FB72AF1395D0073E499 /* SearchBarComponent.swift */,
 				44F73FBB2AF1418F0073E499 /* FriendsInvitationComponent.swift */,
 			);
 			path = Views;
@@ -424,6 +451,8 @@
 		44F73FC82AF14E110073E499 /* KKLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				44F73FBF2AF149B00073E499 /* Extension+String.swift */,
+				30C689952AF1FA2700C54250 /* Extension+Sequence.swift */,
 				30C689842AF1D8E900C54250 /* models */,
 				30C6897F2AF1D72300C54250 /* lib */,
 				44F73FC92AF14E110073E499 /* KKLibrary.h */,
@@ -444,6 +473,57 @@
 			path = KKLibraryTests;
 			sourceTree = "<group>";
 		};
+		44F73FF02AF298250073E499 /* AddContact */ = {
+			isa = PBXGroup;
+			children = (
+				44F73FF12AF298310073E499 /* ViewControllers */,
+			);
+			path = AddContact;
+			sourceTree = "<group>";
+		};
+		44F73FF12AF298310073E499 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				44F73FF22AF298400073E499 /* AddContactViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		44F73FFA2AF29C860073E499 /* KKUILibrary */ = {
+			isa = PBXGroup;
+			children = (
+				30C689552AF0DCCD00C54250 /* RootViewControllerData.swift */,
+				30C689582AF0E54900C54250 /* Colors.swift */,
+				30C689682AF0E8F400C54250 /* NavigationHeaderPanelLayout.swift */,
+				30C6896F2AF0F02300C54250 /* Font.swift */,
+				30C689732AF0FC6100C54250 /* LinearGradient.swift */,
+				44F73FB92AF13EC80073E499 /* SearchBarView.swift */,
+				30B56CA72AF236B30060F559 /* TabBarPanelLayout.swift */,
+				44F73FFB2AF29C860073E499 /* KKUILibrary.h */,
+				44F73FFC2AF29C860073E499 /* KKUILibrary.docc */,
+			);
+			path = KKUILibrary;
+			sourceTree = "<group>";
+		};
+		44F740082AF29C860073E499 /* KKUILibraryTests */ = {
+			isa = PBXGroup;
+			children = (
+				44F740092AF29C860073E499 /* KKUILibraryTests.swift */,
+			);
+			path = KKUILibraryTests;
+			sourceTree = "<group>";
+		};
+		44F7402B2AF2A05C0073E499 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				30C689662AF0E86700C54250 /* FloatingContentViewController.swift */,
+				30C689772AF1010800C54250 /* Color.swift */,
+				44F73FBD2AF143DE0073E499 /* Extension+Component.swift */,
+				30B56CA92AF237870060F559 /* KKTabBarView.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -452,6 +532,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				44F73FD92AF14E110073E499 /* KKLibrary.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44F73FF42AF29C860073E499 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44F7400B2AF29C860073E499 /* KKUILibrary.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +559,7 @@
 			);
 			dependencies = (
 				44F73FDB2AF14E110073E499 /* PBXTargetDependency */,
+				44F7400D2AF29C860073E499 /* PBXTargetDependency */,
 			);
 			name = KKInterview;
 			packageProductDependencies = (
@@ -555,6 +644,46 @@
 			productReference = 44F73FD02AF14E110073E499 /* KKLibraryTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		44F73FF82AF29C860073E499 /* KKUILibrary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44F740102AF29C860073E499 /* Build configuration list for PBXNativeTarget "KKUILibrary" */;
+			buildPhases = (
+				44F73FF42AF29C860073E499 /* Headers */,
+				44F73FF52AF29C860073E499 /* Sources */,
+				44F73FF62AF29C860073E499 /* Frameworks */,
+				44F73FF72AF29C860073E499 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KKUILibrary;
+			packageProductDependencies = (
+				44F740252AF29D7E0073E499 /* FloatingPanel */,
+			);
+			productName = KKUILibrary;
+			productReference = 44F73FF92AF29C860073E499 /* KKUILibrary.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		44F740012AF29C860073E499 /* KKUILibraryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44F740132AF29C860073E499 /* Build configuration list for PBXNativeTarget "KKUILibraryTests" */;
+			buildPhases = (
+				44F73FFE2AF29C860073E499 /* Sources */,
+				44F73FFF2AF29C860073E499 /* Frameworks */,
+				44F740002AF29C860073E499 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				44F740052AF29C860073E499 /* PBXTargetDependency */,
+				44F740072AF29C860073E499 /* PBXTargetDependency */,
+			);
+			name = KKUILibraryTests;
+			productName = KKUILibraryTests;
+			productReference = 44F740022AF29C860073E499 /* KKUILibraryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -583,6 +712,13 @@
 						CreatedOnToolsVersion = 15.0;
 						TestTargetID = 30C689152AF0D3AF00C54250;
 					};
+					44F73FF82AF29C860073E499 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					44F740012AF29C860073E499 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 30C689152AF0D3AF00C54250;
+					};
 				};
 			};
 			buildConfigurationList = 30C689112AF0D3AF00C54250 /* Build configuration list for PBXProject "KKInterview" */;
@@ -608,6 +744,8 @@
 				30C689352AF0D3B000C54250 /* KKInterviewUITests */,
 				44F73FC62AF14E110073E499 /* KKLibrary */,
 				44F73FCF2AF14E110073E499 /* KKLibraryTests */,
+				44F73FF82AF29C860073E499 /* KKUILibrary */,
+				44F740012AF29C860073E499 /* KKUILibraryTests */,
 			);
 		};
 /* End PBXProject section */
@@ -651,6 +789,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		44F73FF72AF29C860073E499 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44F740002AF29C860073E499 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -658,36 +810,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44F73FBA2AF13EC80073E499 /* SearchBarView.swift in Sources */,
 				30C689892AF1DB7B00C54250 /* Environment.swift in Sources */,
 				30C689502AF0D63D00C54250 /* RootTabBarViewController.swift in Sources */,
 				30C6897A2AF101EE00C54250 /* FriendsPageIndicatorComponent.swift in Sources */,
 				44F73FBC2AF1418F0073E499 /* FriendsInvitationComponent.swift in Sources */,
+				44F73FF32AF298400073E499 /* AddContactViewController.swift in Sources */,
 				30B56CAF2AF242DE0060F559 /* InterviewEpisode.swift in Sources */,
 				30C6896C2AF0EE6B00C54250 /* PersonalInfoComponent.swift in Sources */,
-				30C689562AF0DCCD00C54250 /* RootViewControllerData.swift in Sources */,
 				30C6896E2AF0EF9600C54250 /* FriendPageComponent.swift in Sources */,
-				30C689592AF0E54900C54250 /* Colors.swift in Sources */,
-				30C689782AF1010800C54250 /* Color.swift in Sources */,
-				30C689962AF1FA2700C54250 /* Extension+Sequence.swift in Sources */,
+				44F7402F2AF2A0E40073E499 /* KKTabBarView.swift in Sources */,
+				44F7402C2AF2A0DB0073E499 /* FloatingContentViewController.swift in Sources */,
 				30C689722AF0F25300C54250 /* EmptyFriendsComponent.swift in Sources */,
-				30C689692AF0E8F400C54250 /* NavigationHeaderPanelLayout.swift in Sources */,
-				30C689742AF0FC6100C54250 /* LinearGradient.swift in Sources */,
 				30C6891A2AF0D3AF00C54250 /* AppDelegate.swift in Sources */,
+				44F7402E2AF2A0E10073E499 /* Extension+Component.swift in Sources */,
+				44F7402D2AF2A0DE0073E499 /* Color.swift in Sources */,
 				30C6895D2AF0E69800C54250 /* FriendsViewController.swift in Sources */,
-				30B56CA82AF236B30060F559 /* TabBarPanelLayout.swift in Sources */,
-				44F73FC02AF149B00073E499 /* Extension+String.swift in Sources */,
-				44F73FBE2AF143DE0073E499 /* Extension+Component.swift in Sources */,
-				30B56CAA2AF237870060F559 /* KKTabBarView.swift in Sources */,
 				30C6898D2AF1E0FF00C54250 /* Notifications.swift in Sources */,
-				30C689702AF0F02300C54250 /* Font.swift in Sources */,
 				30C689532AF0D67000C54250 /* RootTabBarStore.swift in Sources */,
 				30C6898B2AF1DC5B00C54250 /* AppEnvironment.swift in Sources */,
 				30C6897C2AF102C200C54250 /* FriendListComponent.swift in Sources */,
 				30C689902AF1E1FB00C54250 /* FriendsStore.swift in Sources */,
 				30C6891C2AF0D3AF00C54250 /* SceneDelegate.swift in Sources */,
-				30C689672AF0E86700C54250 /* FloatingContentViewController.swift in Sources */,
-				44F73FB82AF1395D0073E499 /* SearchBarComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -712,6 +855,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44F740282AF29DA70073E499 /* Extension+Sequence.swift in Sources */,
 				30C689942AF1EE1B00C54250 /* Person.swift in Sources */,
 				44F73FE62AF14E6F0073E499 /* KKServiceProtocol.swift in Sources */,
 				44F73FEA2AF150F80073E499 /* KKService.swift in Sources */,
@@ -719,6 +863,7 @@
 				30C6897E2AF1D6BE00C54250 /* Route.swift in Sources */,
 				30C689862AF1D8F000C54250 /* User.swift in Sources */,
 				30C689922AF1E58500C54250 /* ServiceMonitor.swift in Sources */,
+				44F740272AF29DA70073E499 /* Extension+String.swift in Sources */,
 				30C689812AF1D73600C54250 /* HttpMethod.swift in Sources */,
 				30C689832AF1D78D00C54250 /* Service+RequestHelpers.swift in Sources */,
 				44F73FCB2AF14E110073E499 /* KKLibrary.docc in Sources */,
@@ -730,6 +875,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				44F73FD82AF14E110073E499 /* KKLibraryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44F73FF52AF29C860073E499 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44F740202AF29C990073E499 /* TabBarPanelLayout.swift in Sources */,
+				44F740182AF29C990073E499 /* SearchBarView.swift in Sources */,
+				44F740242AF29D0C0073E499 /* RootViewControllerData.swift in Sources */,
+				44F7401C2AF29C990073E499 /* NavigationHeaderPanelLayout.swift in Sources */,
+				44F740212AF29C990073E499 /* Font.swift in Sources */,
+				44F740192AF29C990073E499 /* LinearGradient.swift in Sources */,
+				44F7401B2AF29C990073E499 /* Colors.swift in Sources */,
+				44F73FFD2AF29C860073E499 /* KKUILibrary.docc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44F73FFE2AF29C860073E499 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44F7400A2AF29C860073E499 /* KKUILibraryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -760,6 +928,21 @@
 			isa = PBXTargetDependency;
 			target = 44F73FC62AF14E110073E499 /* KKLibrary */;
 			targetProxy = 44F73FDA2AF14E110073E499 /* PBXContainerItemProxy */;
+		};
+		44F740052AF29C860073E499 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 44F73FF82AF29C860073E499 /* KKUILibrary */;
+			targetProxy = 44F740042AF29C860073E499 /* PBXContainerItemProxy */;
+		};
+		44F740072AF29C860073E499 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 30C689152AF0D3AF00C54250 /* KKInterview */;
+			targetProxy = 44F740062AF29C860073E499 /* PBXContainerItemProxy */;
+		};
+		44F7400D2AF29C860073E499 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 44F73FF82AF29C860073E499 /* KKUILibrary */;
+			targetProxy = 44F7400C2AF29C860073E499 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1130,6 +1313,106 @@
 			};
 			name = Release;
 		};
+		44F740112AF29C860073E499 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.com.muqq.recruit.KKUILibrary;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		44F740122AF29C860073E499 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.com.muqq.recruit.KKUILibrary;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		44F740142AF29C860073E499 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6GH2ZWT255;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tw.com.muqq.recruit.KKUILibraryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KKInterview.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KKInterview";
+			};
+			name = Debug;
+		};
+		44F740152AF29C860073E499 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6GH2ZWT255;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tw.com.muqq.recruit.KKUILibraryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KKInterview.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KKInterview";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1187,6 +1470,24 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		44F740102AF29C860073E499 /* Build configuration list for PBXNativeTarget "KKUILibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44F740112AF29C860073E499 /* Debug */,
+				44F740122AF29C860073E499 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44F740132AF29C860073E499 /* Build configuration list for PBXNativeTarget "KKUILibraryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44F740142AF29C860073E499 /* Debug */,
+				44F740152AF29C860073E499 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -1231,6 +1532,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 30C689632AF0E83800C54250 /* XCRemoteSwiftPackageReference "UIComponent" */;
 			productName = UIComponent;
+		};
+		44F740252AF29D7E0073E499 /* FloatingPanel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30C6895E2AF0E7D900C54250 /* XCRemoteSwiftPackageReference "FloatingPanel" */;
+			productName = FloatingPanel;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
