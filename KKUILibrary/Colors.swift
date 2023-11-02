@@ -79,7 +79,7 @@ public extension UIColor {
     }
 }
 
-// MARK: - UIColor
+// MARK: - Gray
 public extension UIColor {
     
     /// r: 201, g: 201, b: 201
@@ -92,4 +92,8 @@ public extension UIColor {
         return UIColor(red: 153/255, green: 153/255, blue: 153/255, alpha: 1)
     }
     
+    /// r: 142, g: 142, b: 147
+    static var steel: UIColor {
+        return UIColor(red: 142/255, green: 142/255, blue: 147/255, alpha: 1)
+    }
 }

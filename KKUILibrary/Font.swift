@@ -9,11 +9,11 @@ import UIKit
 
 public extension UIFont {
     
-    public static func regular(size: CGFloat = 14) -> UIFont {
+    static func regular(size: CGFloat = 14) -> UIFont {
         return .preferredFont(style: .body, size: size)
     }
     
-    public static func medium(size: CGFloat = 14) -> UIFont {
+    static func medium(size: CGFloat = 14) -> UIFont {
         return .preferredFont(style: .body, size: size)
     }
     

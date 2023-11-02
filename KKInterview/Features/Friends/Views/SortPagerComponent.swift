@@ -8,6 +8,7 @@
 import UIKit
 import UIComponent
 import BaseToolbox
+import KKLibrary
 
 struct SortPagerComponent: ComponentBuilder {
     

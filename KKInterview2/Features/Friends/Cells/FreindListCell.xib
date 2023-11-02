@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -37,21 +38,37 @@
                             <constraint firstAttribute="height" constant="18" id="fzM-mW-XJ3"/>
                         </constraints>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CxS-mi-ing">
+                        <rect key="frame" x="85" y="60" width="397" height="1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="KSB-SP-qMY"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="CgG-XT-90e" firstAttribute="leading" secondItem="uGO-Hm-pQN" secondAttribute="trailing" constant="15" id="0Qe-82-9hQ"/>
+                <constraint firstItem="CxS-mi-ing" firstAttribute="leading" secondItem="CgG-XT-90e" secondAttribute="leading" id="2HT-Ph-QOr"/>
                 <constraint firstItem="F6h-kZ-2Fd" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="54n-q1-VSZ"/>
+                <constraint firstAttribute="bottom" secondItem="CxS-mi-ing" secondAttribute="bottom" id="GOX-RS-LWR"/>
                 <constraint firstItem="uGO-Hm-pQN" firstAttribute="leading" secondItem="F6h-kZ-2Fd" secondAttribute="trailing" constant="6" id="Sze-5N-j50"/>
                 <constraint firstItem="F6h-kZ-2Fd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="WeE-Xr-bzc"/>
                 <constraint firstItem="uGO-Hm-pQN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="XIc-db-FmE"/>
                 <constraint firstItem="CgG-XT-90e" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="i5u-sZ-4ua"/>
                 <constraint firstAttribute="bottom" secondItem="uGO-Hm-pQN" secondAttribute="bottom" constant="10" id="jkZ-Uh-Mgb"/>
                 <constraint firstItem="cbv-uf-qDm" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="llV-6R-LXR"/>
+                <constraint firstItem="CxS-mi-ing" firstAttribute="trailing" secondItem="cbv-uf-qDm" secondAttribute="trailing" id="owN-ru-pJH"/>
                 <constraint firstAttribute="trailing" secondItem="cbv-uf-qDm" secondAttribute="trailing" constant="10" id="oyn-PZ-N3f"/>
             </constraints>
             <size key="customSize" width="492" height="61"/>
+            <connections>
+                <outlet property="moreImageView" destination="cbv-uf-qDm" id="6Nc-Bf-07j"/>
+                <outlet property="nameLabel" destination="CgG-XT-90e" id="jeh-7f-UNy"/>
+                <outlet property="separator" destination="CxS-mi-ing" id="IxT-ni-BQR"/>
+                <outlet property="starIconView" destination="F6h-kZ-2Fd" id="wpk-Ck-U4c"/>
+            </connections>
             <point key="canvasLocation" x="476.3358778625954" y="53.87323943661972"/>
         </collectionViewCell>
     </objects>
@@ -59,5 +76,8 @@
         <image name="ic_friends_more" width="18" height="4"/>
         <image name="ic_friends_star" width="14" height="14"/>
         <image name="img_friends_list" width="40" height="40"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

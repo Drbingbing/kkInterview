@@ -54,7 +54,7 @@ struct PersonEnvelope: Decodable {
     let response: [Person]
 }
 
-public struct Person: Decodable, Equatable {
+public struct Person: Decodable, Hashable {
     
     public var name: String
     public var status: Int
@@ -73,5 +73,13 @@ public struct Person: Decodable, Equatable {
         self.isTop = try container.decode(String.self, forKey: .isTop) as String == "1"
         self.fid = try container.decode(String.self, forKey: .fid)
         self.updateDate = try container.decode(String.self, forKey: .updateDate)
+    }
+    
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(name)
+        hasher.combine(fid)
+        hasher.combine(updateDate)
+        hasher.combine(isTop)
+        hasher.combine(status)
     }
 }

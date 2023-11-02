@@ -28,30 +28,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       shouldAutocreateTestPlan = "YES">
-      <Testables>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "44F740522AF2A4EF0073E499"
-               BuildableName = "KKInterview2UITests.xctest"
-               BlueprintName = "KKInterview2UITests"
-               ReferencedContainer = "container:KKInterview.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "44F740482AF2A4EF0073E499"
-               BuildableName = "KKInterview2Tests.xctest"
-               BlueprintName = "KKInterview2Tests"
-               ReferencedContainer = "container:KKInterview.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -76,7 +52,7 @@
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "episode"
-            value = "1"
+            value = "2"
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>

@@ -12,27 +12,28 @@ import KKApi
 
 struct FriendsInvitationComponent: ComponentBuilder {
     
-    var persons: [Person] = []
+    var person: [Person] = []
     var isStacked: Bool = false
     var onTap: (Person) -> Void
     
     func build() -> Component {
-        VStack(spacing: 10) {
-            ForEach(persons.enumerated()) { index, person in
-                let yOffset: CGFloat = (isStacked ? 60 : 0) * CGFloat(-index)
-                InvitationComponent(person: person)
+        VStack(spacing: isStacked ? -20 : 10) {
+            ForEach(person.enumerated()) { index, people in
+                let total = CGFloat(person.count)
+                let position = CGFloat(index)
+                let offset = total - position
+                InvitationComponent(person: people)
                     .tappableView {
-                        onTap(person)
+                        onTap(people)
                     }
-                    .zPosition(isStacked ? CGFloat(persons.count - index) : 1)
-                    .offset(y: yOffset)
-                    .inset(h: isStacked ? CGFloat(index) * 10 : 0)
+                    .inset(bottom: isStacked ? -offset * 20 : 0)
+                    .inset(h: isStacked ? CGFloat(offset) * 10 : 0)
             }
         }
         .inset(
-            top: persons.isEmpty ? 15 : 30,
+            top: person.isEmpty ? 15 : 30,
             left: 30,
-            bottom: persons.isEmpty ? 15 : 30 - (isStacked ? CGFloat(persons.count - 1) * 60 : 0),
+            bottom: 30 + CGFloat(person.count) * (isStacked ? 10 : 0),
             right: 30
         )
         .view()

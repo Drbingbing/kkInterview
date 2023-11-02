@@ -99,7 +99,7 @@ final class RootTabBarController: UITabBarController {
         case .wallets:
             return UIViewController()
         case .friends:
-            return FriendsViewController()
+            return FriendsViewController(episode: AppEnvironment.current.episode)
         case .home:
             return UIViewController()
         case .management:

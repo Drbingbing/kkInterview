@@ -8,43 +8,15 @@
 import UIKit
 import KKUILibrary
 import BaseToolbox
+import KKApi
+import KKLibrary
+import ComposableArchitecture
+import Combine
 
 final class UserHeaderViewController: UIViewController {
     
-    private let avatorView = WrapperView<UIImageView>()
-        .then {
-            $0.contentView.image = UIImage(named: "img_friends_female_default")
-        }
-    
-    private let stackView = UIStackView()
-        .then {
-            $0.axis = .vertical
-            $0.spacing = 8
-        }
-    
-    private let nameLabel = WrapperView<UILabel>()
-        .then {
-            $0.contentView.text = "子霖"
-            $0.contentView.textColor = .primaryLabel
-            $0.contentView.font = .medium(size: 17)
-        }
-    
-    private let subtitleLabel = WrapperView<UILabel>()
-        .then {
-            $0.contentView.text = "設定 KOKO ID"
-            $0.contentView.textColor = .primaryLabel
-            $0.contentView.font = .regular(size: 13)
-        }
-    
-    private let arrowImage = WrapperView<UIImageView>()
-        .then {
-            $0.contentView.image = UIImage(named: "arrow_right_deep_gray")
-        }
-    
-    private let circleImage = WrapperView<UIView>()
-        .then {
-            $0.backgroundColor = .primaryTintColor
-        }
+    private let store: StoreOf<UserHeaderStore> = Store(initialState: UserHeaderStore.State(), reducer: { UserHeaderStore() })
+    private lazy var viewStore: ViewStoreOf<UserHeaderStore> = ViewStore(store, observe: { $0 })
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,6 +38,7 @@ final class UserHeaderViewController: UIViewController {
         
         stackView.addArrangedSubview(nameLabel)
         stackView.addArrangedSubview(subtitleLabel)
+        nameLabel.setContentHuggingPriority(.required, for: .vertical)
         subtitleLabel.setContentHuggingPriority(.defaultLow, for: .vertical)
         
         view.addSubview(arrowImage)
@@ -81,10 +54,89 @@ final class UserHeaderViewController: UIViewController {
         circleImage.centerYAnchor.constraint(equalTo: arrowImage.centerYAnchor).isActive = true
         circleImage.heightAnchor.constraint(equalToConstant: 10).isActive = true
         circleImage.widthAnchor.constraint(equalToConstant: 10).isActive = true
+        
+        binding()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         circleImage.cornerRadius = circleImage.frame.height / 2
     }
+    
+    private func binding() {
+        
+        let stream = viewStore.publisher
+            .user
+            .compactMap { $0 }
+            .share()
+        
+        stream
+            .map(\.name)
+            .removeDuplicates()
+            .sink { [weak self] name in
+                self?.nameLabel.text = name
+            }
+            .store(in: &cancellables)
+        stream.map(\.kokoID)
+            .removeDuplicates()
+            .sink { [weak self] kokoID in
+                self?.subtitleLabel.text = "KOKO ID：\(kokoID)"
+            }
+            .store(in: &cancellables)
+        
+        viewStore.publisher.user
+            .removeDuplicates()
+            .sink { [weak self] user in
+                self?.circleImage.isHidden = user != nil
+            }
+            .store(in: &cancellables)
+    }
+    
+    // MARK: - Private properties
+    
+    private let avatorView = UIImageView()
+        .then {
+            $0.image = UIImage(named: "img_friends_female_default")
+        }
+    
+    private let stackView = UIStackView()
+        .then {
+            $0.axis = .vertical
+            $0.spacing = 8
+        }
+    
+    let nameLabel = UILabel()
+        .then {
+            $0.text = ""
+            $0.textColor = .primaryLabel
+            $0.font = .medium(size: 17)
+        }
+    
+    private let subtitleLabel = UILabel()
+        .then {
+            $0.text = "設定 KOKO ID"
+            $0.textColor = .primaryLabel
+            $0.font = .regular(size: 13)
+        }
+    
+    private let arrowImage = UIImageView()
+        .then {
+            $0.image = UIImage(named: "arrow_right_deep_gray")
+        }
+    
+    private let circleImage = UIView()
+        .then {
+            $0.backgroundColor = .primaryTintColor
+        }
+    
+    private var cancellables: [AnyCancellable] = []
+}
+
+// MARK: - Public methods
+extension UserHeaderViewController {
+    
+    func populate(user: User?) {
+        store.send(.configure(user))
+    }
+    
 }

@@ -7,29 +7,32 @@
 
 import Foundation
 import ComposableArchitecture
-import KKLibrary
 import KKApi
 
-struct FriendsStore: Reducer {
+public struct FriendsStore: Reducer {
     
     private var episode: InterviewEpisode
     
-    init(episode: InterviewEpisode) {
+    public init(episode: InterviewEpisode) {
         self.episode = episode
     }
     
-    struct State: Equatable {
-        var currentUser: User?
-        var friendList: [Person] = []
-        var invitations: [Person] = []
-        var showKeyboard: Bool = false
-        var filterList: [Person]? = nil
-        var isRefreshing: Bool = false
-        var isStacked: Bool = true
-        var sorts: [SortPagerParams] = []
+    public struct State: Equatable {
+        public var currentUser: User?
+        public var friendList: [Person] = []
+        public var invitations: [Person] = []
+        public var showKeyboard: Bool = false
+        public var filterList: [Person]? = nil
+        public var isRefreshing: Bool = false
+        public var isStacked: Bool = true
+        public var sorts: [SortPagerParams] = []
+        public var disableSearchbar: Bool = false
+        public var searchText: String? = nil
+        
+        public init() {}
     }
     
-    enum Action {
+    public enum Action {
         case currentUserUpdated
         case viewDidLoad
         case friendListResponse(TaskResult<[Person]>)
@@ -41,7 +44,7 @@ struct FriendsStore: Reducer {
         case createSortButtons
     }
     
-    var body: some ReducerOf<Self> {
+    public var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
             case .currentUserUpdated:
@@ -69,7 +72,16 @@ struct FriendsStore: Reducer {
                 
             case let .friendListResponse(.success(person)):
                 switch episode {
-                case .episode1, .episode2:
+                case .episode1:
+                    let merged = mergePersons(previous: state.friendList, new: person)
+                    state.friendList = merged
+                    state.isRefreshing = false
+                    state.sorts = [
+                        SortPagerParams(title: "好友", badgeNumber: merged.filter({ $0.status == 2 }).count ),
+                        SortPagerParams(title: "聊天", badgeNumber: 100)
+                    ]
+                    state.disableSearchbar = true
+                case .episode2:
                     let merged = mergePersons(previous: state.friendList, new: person)
                     state.friendList = merged
                     state.isRefreshing = false
@@ -98,8 +110,9 @@ struct FriendsStore: Reducer {
                 state.showKeyboard = false
                 return .none
             case let .searchTextChanged(query):
+                state.searchText = query
                 if query.isEmpty {
-                    state.filterList = nil
+                    state.filterList = state.friendList
                 } else {
                     let filtered = state.friendList.filter { $0.name.contains(query) }
                     state.filterList = filtered
@@ -109,6 +122,7 @@ struct FriendsStore: Reducer {
                 state.filterList = nil
                 state.friendList = []
                 state.isRefreshing = true
+                state.searchText = nil
                 return .send(.viewDidLoad)
             case .invitationTapped:
                 state.isStacked.toggle()

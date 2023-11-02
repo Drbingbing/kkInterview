@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		30B56CB12AF327010060F559 /* SortPagerParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B56CB02AF327010060F559 /* SortPagerParams.swift */; };
 		30B56CB52AF32E990060F559 /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B56CB42AF32E990060F559 /* RootTabBarController.swift */; };
 		30B56CB62AF32ED60060F559 /* RootViewControllerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689552AF0DCCD00C54250 /* RootViewControllerData.swift */; };
 		30B56CBA2AF330E80060F559 /* KKTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B56CB92AF330E80060F559 /* KKTabBarView.swift */; };
@@ -65,12 +64,22 @@
 		30C689722AF0F25300C54250 /* EmptyFriendsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689712AF0F25300C54250 /* EmptyFriendsComponent.swift */; };
 		30C6897A2AF101EE00C54250 /* SortPagerIndicatorComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689792AF101EE00C54250 /* SortPagerIndicatorComponent.swift */; };
 		30C6897C2AF102C200C54250 /* FriendListComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6897B2AF102C200C54250 /* FriendListComponent.swift */; };
-		30C689902AF1E1FB00C54250 /* FriendsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6898F2AF1E1FB00C54250 /* FriendsStore.swift */; };
 		30F8DD142AF38BE7001E8F56 /* FriendContentPanelLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F8DD132AF38BE7001E8F56 /* FriendContentPanelLayout.swift */; };
 		30F8DD162AF38D14001E8F56 /* FriendsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F8DD152AF38D14001E8F56 /* FriendsListViewController.swift */; };
 		30F8DD192AF396AD001E8F56 /* FriendEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F8DD182AF396AD001E8F56 /* FriendEmptyView.swift */; };
 		30F8DD1E2AF3A272001E8F56 /* FreindListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F8DD1C2AF3A272001E8F56 /* FreindListCell.swift */; };
 		30F8DD1F2AF3A272001E8F56 /* FreindListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30F8DD1D2AF3A272001E8F56 /* FreindListCell.xib */; };
+		44D5993A2AF3C09100A11594 /* FriendsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6898F2AF1E1FB00C54250 /* FriendsStore.swift */; };
+		44D5993B2AF3C0AE00A11594 /* SortPagerParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B56CB02AF327010060F559 /* SortPagerParams.swift */; };
+		44D5993E2AF3C49900A11594 /* UserHeaderStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D5993D2AF3C49900A11594 /* UserHeaderStore.swift */; };
+		44D599402AF3CB8C00A11594 /* FriendListStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D5993F2AF3CB8C00A11594 /* FriendListStore.swift */; };
+		44D599422AF3E8A800A11594 /* FreindListCellStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D599412AF3E8A800A11594 /* FreindListCellStore.swift */; };
+		44D599442AF3F95500A11594 /* SortPagerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D599432AF3F95500A11594 /* SortPagerStore.swift */; };
+		44D599462AF3FB7600A11594 /* SortPagerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D599452AF3FB7600A11594 /* SortPagerCell.swift */; };
+		44D599482AF3FBE400A11594 /* SortPagerCellStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D599472AF3FBE400A11594 /* SortPagerCellStore.swift */; };
+		44D5994A2AF40BB500A11594 /* NewInvitationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D599492AF40BB500A11594 /* NewInvitationViewController.swift */; };
+		44D5994C2AF410D100A11594 /* FriendsSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D5994B2AF410D100A11594 /* FriendsSearchViewController.swift */; };
+		44D5994E2AF425E400A11594 /* NewInvitationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D5994D2AF425E400A11594 /* NewInvitationStore.swift */; };
 		44F73FBC2AF1418F0073E499 /* FriendsInvitationComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F73FBB2AF1418F0073E499 /* FriendsInvitationComponent.swift */; };
 		44F73FCB2AF14E110073E499 /* KKLibrary.docc in Sources */ = {isa = PBXBuildFile; fileRef = 44F73FCA2AF14E110073E499 /* KKLibrary.docc */; };
 		44F73FD12AF14E110073E499 /* KKLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F73FC72AF14E110073E499 /* KKLibrary.framework */; };
@@ -313,6 +322,15 @@
 		30F8DD182AF396AD001E8F56 /* FriendEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendEmptyView.swift; sourceTree = "<group>"; };
 		30F8DD1C2AF3A272001E8F56 /* FreindListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreindListCell.swift; sourceTree = "<group>"; };
 		30F8DD1D2AF3A272001E8F56 /* FreindListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FreindListCell.xib; sourceTree = "<group>"; };
+		44D5993D2AF3C49900A11594 /* UserHeaderStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeaderStore.swift; sourceTree = "<group>"; };
+		44D5993F2AF3CB8C00A11594 /* FriendListStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListStore.swift; sourceTree = "<group>"; };
+		44D599412AF3E8A800A11594 /* FreindListCellStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreindListCellStore.swift; sourceTree = "<group>"; };
+		44D599432AF3F95500A11594 /* SortPagerStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortPagerStore.swift; sourceTree = "<group>"; };
+		44D599452AF3FB7600A11594 /* SortPagerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortPagerCell.swift; sourceTree = "<group>"; };
+		44D599472AF3FBE400A11594 /* SortPagerCellStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortPagerCellStore.swift; sourceTree = "<group>"; };
+		44D599492AF40BB500A11594 /* NewInvitationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInvitationViewController.swift; sourceTree = "<group>"; };
+		44D5994B2AF410D100A11594 /* FriendsSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsSearchViewController.swift; sourceTree = "<group>"; };
+		44D5994D2AF425E400A11594 /* NewInvitationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInvitationStore.swift; sourceTree = "<group>"; };
 		44F73FB92AF13EC80073E499 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		44F73FBB2AF1418F0073E499 /* FriendsInvitationComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsInvitationComponent.swift; sourceTree = "<group>"; };
 		44F73FBD2AF143DE0073E499 /* Extension+Component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Component.swift"; sourceTree = "<group>"; };
@@ -492,7 +510,14 @@
 		30B56D042AF3502D0060F559 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				30C6898F2AF1E1FB00C54250 /* FriendsStore.swift */,
 				30C689522AF0D67000C54250 /* RootTabBarStore.swift */,
+				44D5993D2AF3C49900A11594 /* UserHeaderStore.swift */,
+				44D5993F2AF3CB8C00A11594 /* FriendListStore.swift */,
+				44D599412AF3E8A800A11594 /* FreindListCellStore.swift */,
+				44D599432AF3F95500A11594 /* SortPagerStore.swift */,
+				44D599472AF3FBE400A11594 /* SortPagerCellStore.swift */,
+				44D5994D2AF425E400A11594 /* NewInvitationStore.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -516,6 +541,8 @@
 				30B56D122AF3790F0060F559 /* UserHeaderViewController.swift */,
 				30B56D142AF37BD20060F559 /* SortPagerViewController.swift */,
 				30F8DD152AF38D14001E8F56 /* FriendsListViewController.swift */,
+				44D599492AF40BB500A11594 /* NewInvitationViewController.swift */,
+				44D5994B2AF410D100A11594 /* FriendsSearchViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -594,7 +621,6 @@
 		30C6894C2AF0D42500C54250 /* Friends */ = {
 			isa = PBXGroup;
 			children = (
-				30C6898E2AF1E16900C54250 /* ViewModels */,
 				30C6896A2AF0EE5800C54250 /* Views */,
 				30C6895B2AF0E68000C54250 /* ViewControllers */,
 			);
@@ -667,15 +693,6 @@
 			path = models;
 			sourceTree = "<group>";
 		};
-		30C6898E2AF1E16900C54250 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				30C6898F2AF1E1FB00C54250 /* FriendsStore.swift */,
-				30B56CB02AF327010060F559 /* SortPagerParams.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		30C689982AF1FC0000C54250 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -704,13 +721,23 @@
 			children = (
 				30F8DD1C2AF3A272001E8F56 /* FreindListCell.swift */,
 				30F8DD1D2AF3A272001E8F56 /* FreindListCell.xib */,
+				44D599452AF3FB7600A11594 /* SortPagerCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		44D5993C2AF3C0B200A11594 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				30B56CB02AF327010060F559 /* SortPagerParams.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		44F73FC82AF14E110073E499 /* KKLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				44D5993C2AF3C0B200A11594 /* model */,
 				30B56D042AF3502D0060F559 /* ViewModels */,
 				30B56CAE2AF242DE0060F559 /* InterviewEpisode.swift */,
 				30C689882AF1DB7B00C54250 /* Environment.swift */,
@@ -1322,7 +1349,6 @@
 				30C6897A2AF101EE00C54250 /* SortPagerIndicatorComponent.swift in Sources */,
 				44F73FBC2AF1418F0073E499 /* FriendsInvitationComponent.swift in Sources */,
 				44F73FF32AF298400073E499 /* AddContactViewController.swift in Sources */,
-				30B56CB12AF327010060F559 /* SortPagerParams.swift in Sources */,
 				30C6896C2AF0EE6B00C54250 /* PersonalInfoComponent.swift in Sources */,
 				30C6896E2AF0EF9600C54250 /* SortPagerComponent.swift in Sources */,
 				44F7402F2AF2A0E40073E499 /* KKTabBarView.swift in Sources */,
@@ -1333,7 +1359,6 @@
 				44F7402D2AF2A0DE0073E499 /* Color.swift in Sources */,
 				30C6895D2AF0E69800C54250 /* FriendsViewController.swift in Sources */,
 				30C6897C2AF102C200C54250 /* FriendListComponent.swift in Sources */,
-				30C689902AF1E1FB00C54250 /* FriendsStore.swift in Sources */,
 				30C6891C2AF0D3AF00C54250 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1359,14 +1384,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44D5994E2AF425E400A11594 /* NewInvitationStore.swift in Sources */,
 				30B56D072AF350A60060F559 /* RootTabBarStore.swift in Sources */,
 				44F740282AF29DA70073E499 /* Extension+Sequence.swift in Sources */,
 				30B56CD22AF34EBC0060F559 /* Environment.swift in Sources */,
+				44D599442AF3F95500A11594 /* SortPagerStore.swift in Sources */,
 				30B56CD32AF34EBC0060F559 /* Notifications.swift in Sources */,
 				30B56CD12AF34EBC0060F559 /* AppEnvironment.swift in Sources */,
+				44D5993E2AF3C49900A11594 /* UserHeaderStore.swift in Sources */,
+				44D599482AF3FBE400A11594 /* SortPagerCellStore.swift in Sources */,
+				44D599402AF3CB8C00A11594 /* FriendListStore.swift in Sources */,
+				44D599422AF3E8A800A11594 /* FreindListCellStore.swift in Sources */,
+				44D5993A2AF3C09100A11594 /* FriendsStore.swift in Sources */,
 				44F740272AF29DA70073E499 /* Extension+String.swift in Sources */,
 				30B56CD42AF34ECD0060F559 /* InterviewEpisode.swift in Sources */,
 				44F73FCB2AF14E110073E499 /* KKLibrary.docc in Sources */,
+				44D5993B2AF3C0AE00A11594 /* SortPagerParams.swift in Sources */,
 				30B56CB62AF32ED60060F559 /* RootViewControllerData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1411,6 +1444,7 @@
 				30F8DD192AF396AD001E8F56 /* FriendEmptyView.swift in Sources */,
 				30B56D0B2AF3540F0060F559 /* FriendsViewController.swift in Sources */,
 				30F8DD162AF38D14001E8F56 /* FriendsListViewController.swift in Sources */,
+				44D5994C2AF410D100A11594 /* FriendsSearchViewController.swift in Sources */,
 				30B56D102AF36D3F0060F559 /* FriendsNavigationHeaderController.swift in Sources */,
 				30B56CB52AF32E990060F559 /* RootTabBarController.swift in Sources */,
 				44F740372AF2A4EC0073E499 /* AppDelegate.swift in Sources */,
@@ -1419,6 +1453,8 @@
 				44F740392AF2A4EC0073E499 /* SceneDelegate.swift in Sources */,
 				30F8DD142AF38BE7001E8F56 /* FriendContentPanelLayout.swift in Sources */,
 				30F8DD1E2AF3A272001E8F56 /* FreindListCell.swift in Sources */,
+				44D599462AF3FB7600A11594 /* SortPagerCell.swift in Sources */,
+				44D5994A2AF40BB500A11594 /* NewInvitationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

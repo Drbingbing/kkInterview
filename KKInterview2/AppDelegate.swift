@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UIComponent
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        TappableViewConfiguration.default = TappableViewConfiguration(
+            onHighlightChanged: { view, isHighlighted in
+                UIView.animate(withDuration: 0.2) {
+                    view.transform = .identity.scaledBy(isHighlighted ? 0.96 : 1)
+                }
+            }
+        )
         return true
     }
 

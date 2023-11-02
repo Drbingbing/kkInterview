@@ -111,6 +111,12 @@ final class FriendsViewController: UIViewController {
                 self.componentView.component = self.component
             }
             .store(in: &cancellable)
+        viewStore.publisher
+            .searchText
+            .sink { [weak self] text in
+                self?.searchBar.searchBar.text = text
+            }
+            .store(in: &cancellable)
     }
     
     private func setupScrollView() {
@@ -178,7 +184,7 @@ final class FriendsViewController: UIViewController {
         VStack {
             if !viewStore.showKeyboard {
                 PersonalInfoComponent(user: viewStore.currentUser)
-                FriendsInvitationComponent(persons: viewStore.invitations, isStacked: viewStore.isStacked) { [weak self] person in
+                FriendsInvitationComponent(person: viewStore.invitations, isStacked: viewStore.isStacked) { [weak self] person in
                     self?.viewStore.send(.invitationTapped(person))
                 }
                 SortPagerComponent(sorts: viewStore.sorts)

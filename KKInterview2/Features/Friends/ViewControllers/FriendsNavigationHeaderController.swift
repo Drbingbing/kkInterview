@@ -11,18 +11,18 @@ import BaseToolbox
 
 final class FriendsNavigationHeaderController: UIViewController {
     
-    private let atmImageView = WrapperView<UIImageView>()
+    private let atmImageView = UIImageView()
         .then {
-            $0.contentView.image = UIImage(named: "ic_nav_pink_withdraw")
+            $0.image = UIImage(named: "ic_nav_pink_withdraw")
         }
     
-    private let moneyImageView = WrapperView<UIImageView>()
+    private let moneyImageView = UIImageView()
         .then {
-            $0.contentView.image = UIImage(named: "ic_nav_pink_transfer")
+            $0.image = UIImage(named: "ic_nav_pink_transfer")
         }
-    private let qrCodeImageView = WrapperView<UIImageView>()
+    private let qrCodeImageView = UIImageView()
         .then {
-            $0.contentView.image = UIImage(named: "ic_navpink_scan")
+            $0.image = UIImage(named: "ic_navpink_scan")
         }
     
     override func viewDidLoad() {

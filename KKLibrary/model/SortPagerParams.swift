@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct SortPagerParams: Equatable {
+public struct SortPagerParams: Equatable {
     
-    var title: String
-    var badgeNumber: Int
+    public var title: String
+    public var badgeNumber: Int
     
-    init(title: String, badgeNumber: Int) {
+    public init(title: String, badgeNumber: Int) {
         self.title = title
         self.badgeNumber = badgeNumber
     }
