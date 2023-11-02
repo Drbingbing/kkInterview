@@ -23,7 +23,13 @@ struct EmptyFriendsComponent: ComponentBuilder {
             Text("與好友們一起用 KOKO 聊起來！\n還能互相收付款、發紅包喔：）", font: .regular())
                 .textColor(.brownGray)
             Space(height: 25)
-            LinearGradient(colors: [.frogGreen, .boogerGreen])
+            GradientView()
+                .then {
+                    $0.startPoint = CGPoint(x: 0, y: 0.5)
+                    $0.endPoint = CGPoint(x: 1, y: 0.5)
+                    $0.colors = [.frogGreen, .boogerGreen]
+                    $0.cornerRadius = 20
+                }
                 .size(width: 192, height: 40)
                 .badge(verticalAlignment: .center, horizontalAlignment: .center) {
                     Text("加好友", font: .medium(size: 16))
@@ -33,6 +39,7 @@ struct EmptyFriendsComponent: ComponentBuilder {
                     Image("ic_add_friend_white")
                         .inset(right: 8)
                 }
+                .shadow(color: .appleGreen.withAlphaComponent(0.4))
             Space(height: 37)
             HStack(alignItems: .center) {
                 Text("幫助好友更快找到你？", font: .regular(size: 13))

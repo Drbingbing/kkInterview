@@ -9,12 +9,14 @@ import UIKit
 import ComposableArchitecture
 import Combine
 import KKUILibrary
+import KKLibrary
+import KKApi
 
 final class RootTabBarViewController: UITabBarController {
     
     let store: StoreOf<RootTabBarStore>
     let viewStore: ViewStoreOf<RootTabBarStore>
-    private var cancallable: [AnyCancellable] = []
+    private var cancellable: [AnyCancellable] = []
     private let kkTabBar = KKTabBarView()
     
     init() {
@@ -73,27 +75,27 @@ final class RootTabBarViewController: UITabBarController {
             .sink { [weak self] viewControllers in
                 self?.setViewControllers(viewControllers, animated: false)
             }
-            .store(in: &cancallable)
+            .store(in: &cancellable)
         viewStore.publisher.tabBarItemsData
             .removeDuplicates()
             .sink { [weak self] tabBarItemsData in
                 self?.setTabBarItemStyles()
             }
-            .store(in: &cancallable)
+            .store(in: &cancellable)
         viewStore.publisher.selectedIndex
             .removeDuplicates()
             .sink { [weak self] selectedIndex in
                 self?.selectedIndex = selectedIndex
                 self?.setTabBarItemStyles()
             }
-            .store(in: &cancallable)
+            .store(in: &cancellable)
         viewStore.publisher.currentUser
             .sink { user in
                 guard let user else { return }
                 AppEnvironment.updateCurrentUser(user)
                 NotificationCenter.default.post(.init(name: .kk_userUpdated))
             }
-            .store(in: &cancallable)
+            .store(in: &cancellable)
     }
     
     private func setTabBarItemStyles() {

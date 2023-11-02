@@ -9,6 +9,7 @@ import UIKit
 import UIComponent
 import KKLibrary
 import KKUILibrary
+import KKApi
 
 struct PersonalInfoComponent: ComponentBuilder {
     

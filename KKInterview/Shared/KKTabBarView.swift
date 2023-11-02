@@ -8,6 +8,7 @@
 import UIKit
 import UIComponent
 import KKUILibrary
+import KKLibrary
 
 public protocol KKTabBarViewDelegate: AnyObject {
     func kkTabBarDidTap(tabBar: TabBarItem, at atIndex: Int)

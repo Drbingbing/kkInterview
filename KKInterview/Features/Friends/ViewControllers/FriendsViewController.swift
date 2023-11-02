@@ -12,6 +12,7 @@ import UIComponent
 import Combine
 import KKLibrary
 import KKUILibrary
+import KKApi
 
 final class FriendsViewController: UIViewController {
     
@@ -36,7 +37,7 @@ final class FriendsViewController: UIViewController {
         binding()
         bindingStyle()
         setupScrollView()
-        setupNavigationHeaderCotroller()
+        setupNavigationHeaderController()
         setupNotificationObservers()
         
         viewStore.send(.viewDidLoad)
@@ -121,7 +122,7 @@ final class FriendsViewController: UIViewController {
         componentView.refreshControl = refreshControl
     }
     
-    private func setupNavigationHeaderCotroller() {
+    private func setupNavigationHeaderController() {
         
         let content = FloatingContentViewController()
         let fpc = FloatingPanelController()

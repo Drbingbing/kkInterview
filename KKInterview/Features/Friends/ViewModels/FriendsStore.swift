@@ -8,6 +8,7 @@
 import Foundation
 import ComposableArchitecture
 import KKLibrary
+import KKApi
 
 struct FriendsStore: Reducer {
     

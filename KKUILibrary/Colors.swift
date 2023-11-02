@@ -62,6 +62,11 @@ public extension UIColor {
     static var boogerGreen: UIColor {
         return UIColor(red: 166/255, green: 204/255, blue: 66/255, alpha: 1)
     }
+    
+    /// r: 121, g: 196, b: 27
+    static var appleGreen: UIColor {
+        return UIColor(red: 121/255, green: 196/255, blue: 27/255, alpha: 1)
+    }
 }
 
 

@@ -7,8 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		30B56CAF2AF242DE0060F559 /* InterviewEpisode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B56CAE2AF242DE0060F559 /* InterviewEpisode.swift */; };
 		30B56CB12AF327010060F559 /* SortPagerParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B56CB02AF327010060F559 /* SortPagerParams.swift */; };
+		30B56CB52AF32E990060F559 /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B56CB42AF32E990060F559 /* RootTabBarController.swift */; };
+		30B56CB62AF32ED60060F559 /* RootViewControllerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689552AF0DCCD00C54250 /* RootViewControllerData.swift */; };
+		30B56CBA2AF330E80060F559 /* KKTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B56CB92AF330E80060F559 /* KKTabBarView.swift */; };
+		30B56CBC2AF33B520060F559 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 30B56CBB2AF33B520060F559 /* ComposableArchitecture */; };
+		30B56CBE2AF33B520060F559 /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = 30B56CBD2AF33B520060F559 /* FloatingPanel */; };
+		30B56CC02AF33B520060F559 /* UIComponent in Frameworks */ = {isa = PBXBuildFile; productRef = 30B56CBF2AF33B520060F559 /* UIComponent */; };
+		30B56CC22AF341E60060F559 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B56CC12AF341E60060F559 /* View.swift */; };
+		30B56CC42AF344AE0060F559 /* WrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B56CC32AF344AE0060F559 /* WrapperView.swift */; };
+		30B56CC52AF348750060F559 /* KKLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F73FC72AF14E110073E499 /* KKLibrary.framework */; };
+		30B56CC62AF348750060F559 /* KKLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 44F73FC72AF14E110073E499 /* KKLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		30B56CC92AF348760060F559 /* KKUILibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F73FF92AF29C860073E499 /* KKUILibrary.framework */; };
+		30B56CCA2AF348760060F559 /* KKUILibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 44F73FF92AF29C860073E499 /* KKUILibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		30B56CD12AF34EBC0060F559 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6898A2AF1DC5B00C54250 /* AppEnvironment.swift */; };
+		30B56CD22AF34EBC0060F559 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689882AF1DB7B00C54250 /* Environment.swift */; };
+		30B56CD32AF34EBC0060F559 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6898C2AF1E0FF00C54250 /* Notifications.swift */; };
+		30B56CD42AF34ECD0060F559 /* InterviewEpisode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B56CAE2AF242DE0060F559 /* InterviewEpisode.swift */; };
+		30B56CDE2AF34F050060F559 /* KKApi.docc in Sources */ = {isa = PBXBuildFile; fileRef = 30B56CDD2AF34F050060F559 /* KKApi.docc */; };
+		30B56CE42AF34F050060F559 /* KKApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B56CDA2AF34F050060F559 /* KKApi.framework */; };
+		30B56CEB2AF34F060060F559 /* KKApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B56CEA2AF34F060060F559 /* KKApiTests.swift */; };
+		30B56CEC2AF34F060060F559 /* KKApi.h in Headers */ = {isa = PBXBuildFile; fileRef = 30B56CDC2AF34F050060F559 /* KKApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30B56CEF2AF34F060060F559 /* KKApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B56CDA2AF34F050060F559 /* KKApi.framework */; };
+		30B56CF02AF34F060060F559 /* KKApi.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 30B56CDA2AF34F050060F559 /* KKApi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		30B56CF72AF34F1D0060F559 /* ServerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F73FE72AF14FAC0073E499 /* ServerConfig.swift */; };
+		30B56CF82AF34F1D0060F559 /* KKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F73FE92AF150F80073E499 /* KKService.swift */; };
+		30B56CF92AF34F1D0060F559 /* KKServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F73FE52AF14E6F0073E499 /* KKServiceProtocol.swift */; };
+		30B56CFA2AF34F1D0060F559 /* Service+RequestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689822AF1D78D00C54250 /* Service+RequestHelpers.swift */; };
+		30B56CFB2AF34F420060F559 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689852AF1D8F000C54250 /* User.swift */; };
+		30B56CFC2AF34F460060F559 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689932AF1EE1B00C54250 /* Person.swift */; };
+		30B56CFD2AF34F4D0060F559 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6897D2AF1D6BE00C54250 /* Route.swift */; };
+		30B56CFE2AF34F4D0060F559 /* ServiceMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689912AF1E58500C54250 /* ServiceMonitor.swift */; };
+		30B56CFF2AF34F4D0060F559 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689802AF1D73600C54250 /* HttpMethod.swift */; };
+		30B56D002AF34FF20060F559 /* KKApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B56CDA2AF34F050060F559 /* KKApi.framework */; };
+		30B56D012AF34FF20060F559 /* KKApi.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 30B56CDA2AF34F050060F559 /* KKApi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		30B56D062AF350480060F559 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 30B56D052AF350480060F559 /* ComposableArchitecture */; };
+		30B56D072AF350A60060F559 /* RootTabBarStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689522AF0D67000C54250 /* RootTabBarStore.swift */; };
+		30B56D0B2AF3540F0060F559 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B56D0A2AF3540F0060F559 /* FriendsViewController.swift */; };
+		30B56D102AF36D3F0060F559 /* FriendsNavigationHeaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B56D0F2AF36D3F0060F559 /* FriendsNavigationHeaderController.swift */; };
+		30B56D132AF3790F0060F559 /* UserHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B56D122AF3790F0060F559 /* UserHeaderViewController.swift */; };
+		30B56D152AF37BD20060F559 /* SortPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B56D142AF37BD20060F559 /* SortPagerViewController.swift */; };
 		30C6891A2AF0D3AF00C54250 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689192AF0D3AF00C54250 /* AppDelegate.swift */; };
 		30C6891C2AF0D3AF00C54250 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6891B2AF0D3AF00C54250 /* SceneDelegate.swift */; };
 		30C689212AF0D3AF00C54250 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C6891F2AF0D3AF00C54250 /* Main.storyboard */; };
@@ -19,7 +57,6 @@
 		30C6893D2AF0D3B000C54250 /* KKInterviewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6893C2AF0D3B000C54250 /* KKInterviewUITestsLaunchTests.swift */; };
 		30C6894B2AF0D41D00C54250 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 30C6894A2AF0D41D00C54250 /* ComposableArchitecture */; };
 		30C689502AF0D63D00C54250 /* RootTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6894F2AF0D63D00C54250 /* RootTabBarViewController.swift */; };
-		30C689532AF0D67000C54250 /* RootTabBarStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689522AF0D67000C54250 /* RootTabBarStore.swift */; };
 		30C6895D2AF0E69800C54250 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6895C2AF0E69800C54250 /* FriendsViewController.swift */; };
 		30C689602AF0E7D900C54250 /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = 30C6895F2AF0E7D900C54250 /* FloatingPanel */; };
 		30C689652AF0E83800C54250 /* UIComponent in Frameworks */ = {isa = PBXBuildFile; productRef = 30C689642AF0E83800C54250 /* UIComponent */; };
@@ -28,16 +65,12 @@
 		30C689722AF0F25300C54250 /* EmptyFriendsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689712AF0F25300C54250 /* EmptyFriendsComponent.swift */; };
 		30C6897A2AF101EE00C54250 /* SortPagerIndicatorComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689792AF101EE00C54250 /* SortPagerIndicatorComponent.swift */; };
 		30C6897C2AF102C200C54250 /* FriendListComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6897B2AF102C200C54250 /* FriendListComponent.swift */; };
-		30C6897E2AF1D6BE00C54250 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6897D2AF1D6BE00C54250 /* Route.swift */; };
-		30C689812AF1D73600C54250 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689802AF1D73600C54250 /* HttpMethod.swift */; };
-		30C689832AF1D78D00C54250 /* Service+RequestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689822AF1D78D00C54250 /* Service+RequestHelpers.swift */; };
-		30C689862AF1D8F000C54250 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689852AF1D8F000C54250 /* User.swift */; };
-		30C689892AF1DB7B00C54250 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689882AF1DB7B00C54250 /* Environment.swift */; };
-		30C6898B2AF1DC5B00C54250 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6898A2AF1DC5B00C54250 /* AppEnvironment.swift */; };
-		30C6898D2AF1E0FF00C54250 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6898C2AF1E0FF00C54250 /* Notifications.swift */; };
 		30C689902AF1E1FB00C54250 /* FriendsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6898F2AF1E1FB00C54250 /* FriendsStore.swift */; };
-		30C689922AF1E58500C54250 /* ServiceMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689912AF1E58500C54250 /* ServiceMonitor.swift */; };
-		30C689942AF1EE1B00C54250 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689932AF1EE1B00C54250 /* Person.swift */; };
+		30F8DD142AF38BE7001E8F56 /* FriendContentPanelLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F8DD132AF38BE7001E8F56 /* FriendContentPanelLayout.swift */; };
+		30F8DD162AF38D14001E8F56 /* FriendsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F8DD152AF38D14001E8F56 /* FriendsListViewController.swift */; };
+		30F8DD192AF396AD001E8F56 /* FriendEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F8DD182AF396AD001E8F56 /* FriendEmptyView.swift */; };
+		30F8DD1E2AF3A272001E8F56 /* FreindListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F8DD1C2AF3A272001E8F56 /* FreindListCell.swift */; };
+		30F8DD1F2AF3A272001E8F56 /* FreindListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30F8DD1D2AF3A272001E8F56 /* FreindListCell.xib */; };
 		44F73FBC2AF1418F0073E499 /* FriendsInvitationComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F73FBB2AF1418F0073E499 /* FriendsInvitationComponent.swift */; };
 		44F73FCB2AF14E110073E499 /* KKLibrary.docc in Sources */ = {isa = PBXBuildFile; fileRef = 44F73FCA2AF14E110073E499 /* KKLibrary.docc */; };
 		44F73FD12AF14E110073E499 /* KKLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F73FC72AF14E110073E499 /* KKLibrary.framework */; };
@@ -45,9 +78,6 @@
 		44F73FD92AF14E110073E499 /* KKLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 44F73FC92AF14E110073E499 /* KKLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		44F73FDC2AF14E110073E499 /* KKLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F73FC72AF14E110073E499 /* KKLibrary.framework */; };
 		44F73FDD2AF14E110073E499 /* KKLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 44F73FC72AF14E110073E499 /* KKLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		44F73FE62AF14E6F0073E499 /* KKServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F73FE52AF14E6F0073E499 /* KKServiceProtocol.swift */; };
-		44F73FE82AF14FAC0073E499 /* ServerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F73FE72AF14FAC0073E499 /* ServerConfig.swift */; };
-		44F73FEA2AF150F80073E499 /* KKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F73FE92AF150F80073E499 /* KKService.swift */; };
 		44F73FF32AF298400073E499 /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F73FF22AF298400073E499 /* AddContactViewController.swift */; };
 		44F73FFD2AF29C860073E499 /* KKUILibrary.docc in Sources */ = {isa = PBXBuildFile; fileRef = 44F73FFC2AF29C860073E499 /* KKUILibrary.docc */; };
 		44F740032AF29C860073E499 /* KKUILibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F73FF92AF29C860073E499 /* KKUILibrary.framework */; };
@@ -56,12 +86,11 @@
 		44F7400E2AF29C860073E499 /* KKUILibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F73FF92AF29C860073E499 /* KKUILibrary.framework */; };
 		44F7400F2AF29C860073E499 /* KKUILibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 44F73FF92AF29C860073E499 /* KKUILibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		44F740182AF29C990073E499 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F73FB92AF13EC80073E499 /* SearchBarView.swift */; };
-		44F740192AF29C990073E499 /* LinearGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689732AF0FC6100C54250 /* LinearGradient.swift */; };
+		44F740192AF29C990073E499 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689732AF0FC6100C54250 /* GradientView.swift */; };
 		44F7401B2AF29C990073E499 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689582AF0E54900C54250 /* Colors.swift */; };
 		44F7401C2AF29C990073E499 /* NavigationHeaderPanelLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689682AF0E8F400C54250 /* NavigationHeaderPanelLayout.swift */; };
 		44F740202AF29C990073E499 /* TabBarPanelLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B56CA72AF236B30060F559 /* TabBarPanelLayout.swift */; };
 		44F740212AF29C990073E499 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6896F2AF0F02300C54250 /* Font.swift */; };
-		44F740242AF29D0C0073E499 /* RootViewControllerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689552AF0DCCD00C54250 /* RootViewControllerData.swift */; };
 		44F740262AF29D7E0073E499 /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = 44F740252AF29D7E0073E499 /* FloatingPanel */; };
 		44F740272AF29DA70073E499 /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F73FBF2AF149B00073E499 /* Extension+String.swift */; };
 		44F740282AF29DA70073E499 /* Extension+Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689952AF1FA2700C54250 /* Extension+Sequence.swift */; };
@@ -71,7 +100,6 @@
 		44F7402F2AF2A0E40073E499 /* KKTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B56CA92AF237870060F559 /* KKTabBarView.swift */; };
 		44F740372AF2A4EC0073E499 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F740362AF2A4EC0073E499 /* AppDelegate.swift */; };
 		44F740392AF2A4EC0073E499 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F740382AF2A4EC0073E499 /* SceneDelegate.swift */; };
-		44F7403B2AF2A4EC0073E499 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F7403A2AF2A4EC0073E499 /* ViewController.swift */; };
 		44F7403E2AF2A4EC0073E499 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44F7403C2AF2A4EC0073E499 /* Main.storyboard */; };
 		44F740402AF2A4EE0073E499 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44F7403F2AF2A4EE0073E499 /* Assets.xcassets */; };
 		44F740432AF2A4EE0073E499 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44F740412AF2A4EE0073E499 /* LaunchScreen.storyboard */; };
@@ -81,6 +109,48 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		30B56CC72AF348760060F559 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30C6890E2AF0D3AF00C54250 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 44F73FC62AF14E110073E499;
+			remoteInfo = KKLibrary;
+		};
+		30B56CCB2AF348760060F559 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30C6890E2AF0D3AF00C54250 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 44F73FF82AF29C860073E499;
+			remoteInfo = KKUILibrary;
+		};
+		30B56CE52AF34F050060F559 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30C6890E2AF0D3AF00C54250 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 30B56CD92AF34F050060F559;
+			remoteInfo = KKApi;
+		};
+		30B56CE72AF34F060060F559 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30C6890E2AF0D3AF00C54250 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 30C689152AF0D3AF00C54250;
+			remoteInfo = KKInterview;
+		};
+		30B56CED2AF34F060060F559 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30C6890E2AF0D3AF00C54250 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 30B56CD92AF34F050060F559;
+			remoteInfo = KKApi;
+		};
+		30B56D022AF34FF20060F559 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30C6890E2AF0D3AF00C54250 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 30B56CD92AF34F050060F559;
+			remoteInfo = KKApi;
+		};
 		30C6892D2AF0D3B000C54250 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 30C6890E2AF0D3AF00C54250 /* Project object */;
@@ -154,6 +224,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		30B56CCD2AF348760060F559 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				30B56CCA2AF348760060F559 /* KKUILibrary.framework in Embed Frameworks */,
+				30B56CC62AF348750060F559 /* KKLibrary.framework in Embed Frameworks */,
+				30B56D012AF34FF20060F559 /* KKApi.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		44F73FE12AF14E110073E499 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -162,6 +245,7 @@
 			files = (
 				44F7400F2AF29C860073E499 /* KKUILibrary.framework in Embed Frameworks */,
 				44F73FDD2AF14E110073E499 /* KKLibrary.framework in Embed Frameworks */,
+				30B56CF02AF34F060060F559 /* KKApi.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,6 +257,19 @@
 		30B56CA92AF237870060F559 /* KKTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKTabBarView.swift; sourceTree = "<group>"; };
 		30B56CAE2AF242DE0060F559 /* InterviewEpisode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewEpisode.swift; sourceTree = "<group>"; };
 		30B56CB02AF327010060F559 /* SortPagerParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortPagerParams.swift; sourceTree = "<group>"; };
+		30B56CB42AF32E990060F559 /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
+		30B56CB92AF330E80060F559 /* KKTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KKTabBarView.swift; path = KKInterview2/Features/RootTabBar/ViewController/KKTabBarView.swift; sourceTree = SOURCE_ROOT; };
+		30B56CC12AF341E60060F559 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		30B56CC32AF344AE0060F559 /* WrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrapperView.swift; sourceTree = "<group>"; };
+		30B56CDA2AF34F050060F559 /* KKApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KKApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30B56CDC2AF34F050060F559 /* KKApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKApi.h; sourceTree = "<group>"; };
+		30B56CDD2AF34F050060F559 /* KKApi.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = KKApi.docc; sourceTree = "<group>"; };
+		30B56CE32AF34F050060F559 /* KKApiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KKApiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		30B56CEA2AF34F060060F559 /* KKApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKApiTests.swift; sourceTree = "<group>"; };
+		30B56D0A2AF3540F0060F559 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		30B56D0F2AF36D3F0060F559 /* FriendsNavigationHeaderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FriendsNavigationHeaderController.swift; path = KKInterview2/Features/Friends/ViewControllers/FriendsNavigationHeaderController.swift; sourceTree = SOURCE_ROOT; };
+		30B56D122AF3790F0060F559 /* UserHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeaderViewController.swift; sourceTree = "<group>"; };
+		30B56D142AF37BD20060F559 /* SortPagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortPagerViewController.swift; sourceTree = "<group>"; };
 		30C689162AF0D3AF00C54250 /* KKInterview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KKInterview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C689192AF0D3AF00C54250 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30C6891B2AF0D3AF00C54250 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -196,7 +293,7 @@
 		30C6896D2AF0EF9600C54250 /* SortPagerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortPagerComponent.swift; sourceTree = "<group>"; };
 		30C6896F2AF0F02300C54250 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		30C689712AF0F25300C54250 /* EmptyFriendsComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyFriendsComponent.swift; sourceTree = "<group>"; };
-		30C689732AF0FC6100C54250 /* LinearGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearGradient.swift; sourceTree = "<group>"; };
+		30C689732AF0FC6100C54250 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		30C689772AF1010800C54250 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		30C689792AF101EE00C54250 /* SortPagerIndicatorComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortPagerIndicatorComponent.swift; sourceTree = "<group>"; };
 		30C6897B2AF102C200C54250 /* FriendListComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListComponent.swift; sourceTree = "<group>"; };
@@ -211,6 +308,11 @@
 		30C689912AF1E58500C54250 /* ServiceMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceMonitor.swift; sourceTree = "<group>"; };
 		30C689932AF1EE1B00C54250 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		30C689952AF1FA2700C54250 /* Extension+Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Sequence.swift"; sourceTree = "<group>"; };
+		30F8DD132AF38BE7001E8F56 /* FriendContentPanelLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendContentPanelLayout.swift; sourceTree = "<group>"; };
+		30F8DD152AF38D14001E8F56 /* FriendsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListViewController.swift; sourceTree = "<group>"; };
+		30F8DD182AF396AD001E8F56 /* FriendEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendEmptyView.swift; sourceTree = "<group>"; };
+		30F8DD1C2AF3A272001E8F56 /* FreindListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreindListCell.swift; sourceTree = "<group>"; };
+		30F8DD1D2AF3A272001E8F56 /* FreindListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FreindListCell.xib; sourceTree = "<group>"; };
 		44F73FB92AF13EC80073E499 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		44F73FBB2AF1418F0073E499 /* FriendsInvitationComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsInvitationComponent.swift; sourceTree = "<group>"; };
 		44F73FBD2AF143DE0073E499 /* Extension+Component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Component.swift"; sourceTree = "<group>"; };
@@ -232,7 +334,6 @@
 		44F740342AF2A4EC0073E499 /* KKInterview2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KKInterview2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44F740362AF2A4EC0073E499 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44F740382AF2A4EC0073E499 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		44F7403A2AF2A4EC0073E499 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		44F7403D2AF2A4EC0073E499 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		44F7403F2AF2A4EE0073E499 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44F740422AF2A4EE0073E499 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -245,6 +346,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		30B56CD72AF34F050060F559 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30B56CE02AF34F050060F559 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30B56CE42AF34F050060F559 /* KKApi.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		30C689132AF0D3AF00C54250 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -254,6 +370,7 @@
 				44F7400E2AF29C860073E499 /* KKUILibrary.framework in Frameworks */,
 				44F73FDC2AF14E110073E499 /* KKLibrary.framework in Frameworks */,
 				30C689602AF0E7D900C54250 /* FloatingPanel in Frameworks */,
+				30B56CEF2AF34F060060F559 /* KKApi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +392,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30B56D062AF350480060F559 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +424,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30B56CBC2AF33B520060F559 /* ComposableArchitecture in Frameworks */,
+				30B56CC02AF33B520060F559 /* UIComponent in Frameworks */,
+				30B56CC92AF348760060F559 /* KKUILibrary.framework in Frameworks */,
+				30B56CC52AF348750060F559 /* KKLibrary.framework in Frameworks */,
+				30B56CBE2AF33B520060F559 /* FloatingPanel in Frameworks */,
+				30B56D002AF34FF20060F559 /* KKApi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,24 +450,88 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		30B56CAD2AF242AF0060F559 /* Episode */ = {
+		30B56CB22AF32E0A0060F559 /* RootTabBar */ = {
 			isa = PBXGroup;
 			children = (
-				30B56CAE2AF242DE0060F559 /* InterviewEpisode.swift */,
+				30B56CB32AF32E840060F559 /* ViewController */,
 			);
-			path = Episode;
+			path = RootTabBar;
+			sourceTree = "<group>";
+		};
+		30B56CB32AF32E840060F559 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				30B56CB42AF32E990060F559 /* RootTabBarController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		30B56CDB2AF34F050060F559 /* KKApi */ = {
+			isa = PBXGroup;
+			children = (
+				30C689842AF1D8E900C54250 /* models */,
+				30C6897F2AF1D72300C54250 /* lib */,
+				44F73FE52AF14E6F0073E499 /* KKServiceProtocol.swift */,
+				44F73FE72AF14FAC0073E499 /* ServerConfig.swift */,
+				44F73FE92AF150F80073E499 /* KKService.swift */,
+				30C689822AF1D78D00C54250 /* Service+RequestHelpers.swift */,
+				30B56CDC2AF34F050060F559 /* KKApi.h */,
+				30B56CDD2AF34F050060F559 /* KKApi.docc */,
+			);
+			path = KKApi;
+			sourceTree = "<group>";
+		};
+		30B56CE92AF34F060060F559 /* KKApiTests */ = {
+			isa = PBXGroup;
+			children = (
+				30B56CEA2AF34F060060F559 /* KKApiTests.swift */,
+			);
+			path = KKApiTests;
+			sourceTree = "<group>";
+		};
+		30B56D042AF3502D0060F559 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				30C689522AF0D67000C54250 /* RootTabBarStore.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		30B56D082AF353F30060F559 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				30F8DD1B2AF3A24F001E8F56 /* Cells */,
+				30F8DD172AF38EA1001E8F56 /* Views */,
+				30F8DD122AF38BD7001E8F56 /* Layouts */,
+				30B56D092AF353FA0060F559 /* ViewControllers */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		30B56D092AF353FA0060F559 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				30B56D0F2AF36D3F0060F559 /* FriendsNavigationHeaderController.swift */,
+				30B56D0A2AF3540F0060F559 /* FriendsViewController.swift */,
+				30B56D122AF3790F0060F559 /* UserHeaderViewController.swift */,
+				30B56D142AF37BD20060F559 /* SortPagerViewController.swift */,
+				30F8DD152AF38D14001E8F56 /* FriendsListViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		30C6890D2AF0D3AF00C54250 = {
 			isa = PBXGroup;
 			children = (
-				30C689182AF0D3AF00C54250 /* KKInterview */,
-				30C6892F2AF0D3B000C54250 /* KKInterviewTests */,
-				30C689392AF0D3B000C54250 /* KKInterviewUITests */,
 				44F73FC82AF14E110073E499 /* KKLibrary */,
 				44F73FD62AF14E110073E499 /* KKLibraryTests */,
 				44F73FFA2AF29C860073E499 /* KKUILibrary */,
 				44F740082AF29C860073E499 /* KKUILibraryTests */,
+				30B56CDB2AF34F050060F559 /* KKApi */,
+				30B56CE92AF34F060060F559 /* KKApiTests */,
+				30C689182AF0D3AF00C54250 /* KKInterview */,
+				30C6892F2AF0D3B000C54250 /* KKInterviewTests */,
+				30C689392AF0D3B000C54250 /* KKInterviewUITests */,
 				44F740352AF2A4EC0073E499 /* KKInterview2 */,
 				44F7404C2AF2A4EF0073E499 /* KKInterview2Tests */,
 				44F740562AF2A4EF0073E499 /* KKInterview2UITests */,
@@ -365,6 +553,8 @@
 				44F740342AF2A4EC0073E499 /* KKInterview2.app */,
 				44F740492AF2A4EF0073E499 /* KKInterview2Tests.xctest */,
 				44F740532AF2A4EF0073E499 /* KKInterview2UITests.xctest */,
+				30B56CDA2AF34F050060F559 /* KKApi.framework */,
+				30B56CE32AF34F050060F559 /* KKApiTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -373,8 +563,6 @@
 			isa = PBXGroup;
 			children = (
 				44F7402B2AF2A05C0073E499 /* Shared */,
-				30B56CAD2AF242AF0060F559 /* Episode */,
-				30C689872AF1DB2A00C54250 /* Library */,
 				30C6895A2AF0E66700C54250 /* Features */,
 				30C689192AF0D3AF00C54250 /* AppDelegate.swift */,
 				30C6891B2AF0D3AF00C54250 /* SceneDelegate.swift */,
@@ -416,7 +604,6 @@
 		30C6894D2AF0D42F00C54250 /* RootTabBar */ = {
 			isa = PBXGroup;
 			children = (
-				30C689512AF0D66100C54250 /* Stores */,
 				30C6894E2AF0D62700C54250 /* ViewControllers */,
 			);
 			path = RootTabBar;
@@ -428,14 +615,6 @@
 				30C6894F2AF0D63D00C54250 /* RootTabBarViewController.swift */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		30C689512AF0D66100C54250 /* Stores */ = {
-			isa = PBXGroup;
-			children = (
-				30C689522AF0D67000C54250 /* RootTabBarStore.swift */,
-			);
-			path = Stores;
 			sourceTree = "<group>";
 		};
 		30C6895A2AF0E66700C54250 /* Features */ = {
@@ -488,16 +667,6 @@
 			path = models;
 			sourceTree = "<group>";
 		};
-		30C689872AF1DB2A00C54250 /* Library */ = {
-			isa = PBXGroup;
-			children = (
-				30C689882AF1DB7B00C54250 /* Environment.swift */,
-				30C6898A2AF1DC5B00C54250 /* AppEnvironment.swift */,
-				30C6898C2AF1E0FF00C54250 /* Notifications.swift */,
-			);
-			path = Library;
-			sourceTree = "<group>";
-		};
 		30C6898E2AF1E16900C54250 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -514,19 +683,44 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		30F8DD122AF38BD7001E8F56 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				30F8DD132AF38BE7001E8F56 /* FriendContentPanelLayout.swift */,
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
+		30F8DD172AF38EA1001E8F56 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				30F8DD182AF396AD001E8F56 /* FriendEmptyView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		30F8DD1B2AF3A24F001E8F56 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				30F8DD1C2AF3A272001E8F56 /* FreindListCell.swift */,
+				30F8DD1D2AF3A272001E8F56 /* FreindListCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		44F73FC82AF14E110073E499 /* KKLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				30B56D042AF3502D0060F559 /* ViewModels */,
+				30B56CAE2AF242DE0060F559 /* InterviewEpisode.swift */,
+				30C689882AF1DB7B00C54250 /* Environment.swift */,
+				30C6898A2AF1DC5B00C54250 /* AppEnvironment.swift */,
+				30C6898C2AF1E0FF00C54250 /* Notifications.swift */,
+				30C689552AF0DCCD00C54250 /* RootViewControllerData.swift */,
 				44F73FBF2AF149B00073E499 /* Extension+String.swift */,
 				30C689952AF1FA2700C54250 /* Extension+Sequence.swift */,
-				30C689842AF1D8E900C54250 /* models */,
-				30C6897F2AF1D72300C54250 /* lib */,
 				44F73FC92AF14E110073E499 /* KKLibrary.h */,
 				44F73FCA2AF14E110073E499 /* KKLibrary.docc */,
-				44F73FE52AF14E6F0073E499 /* KKServiceProtocol.swift */,
-				44F73FE72AF14FAC0073E499 /* ServerConfig.swift */,
-				44F73FE92AF150F80073E499 /* KKService.swift */,
-				30C689822AF1D78D00C54250 /* Service+RequestHelpers.swift */,
 			);
 			path = KKLibrary;
 			sourceTree = "<group>";
@@ -558,15 +752,16 @@
 		44F73FFA2AF29C860073E499 /* KKUILibrary */ = {
 			isa = PBXGroup;
 			children = (
-				30C689552AF0DCCD00C54250 /* RootViewControllerData.swift */,
 				30C689582AF0E54900C54250 /* Colors.swift */,
 				30C689682AF0E8F400C54250 /* NavigationHeaderPanelLayout.swift */,
 				30C6896F2AF0F02300C54250 /* Font.swift */,
-				30C689732AF0FC6100C54250 /* LinearGradient.swift */,
+				30C689732AF0FC6100C54250 /* GradientView.swift */,
 				44F73FB92AF13EC80073E499 /* SearchBarView.swift */,
 				30B56CA72AF236B30060F559 /* TabBarPanelLayout.swift */,
 				44F73FFB2AF29C860073E499 /* KKUILibrary.h */,
 				44F73FFC2AF29C860073E499 /* KKUILibrary.docc */,
+				30B56CC12AF341E60060F559 /* View.swift */,
+				30B56CC32AF344AE0060F559 /* WrapperView.swift */,
 			);
 			path = KKUILibrary;
 			sourceTree = "<group>";
@@ -597,7 +792,6 @@
 				44F740642AF2A57A0073E499 /* Shared */,
 				44F740362AF2A4EC0073E499 /* AppDelegate.swift */,
 				44F740382AF2A4EC0073E499 /* SceneDelegate.swift */,
-				44F7403A2AF2A4EC0073E499 /* ViewController.swift */,
 				44F7403C2AF2A4EC0073E499 /* Main.storyboard */,
 				44F7403F2AF2A4EE0073E499 /* Assets.xcassets */,
 				44F740412AF2A4EE0073E499 /* LaunchScreen.storyboard */,
@@ -626,6 +820,7 @@
 		44F740642AF2A57A0073E499 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				30B56CB92AF330E80060F559 /* KKTabBarView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -633,6 +828,8 @@
 		44F740652AF2A5800073E499 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				30B56D082AF353F30060F559 /* Friends */,
+				30B56CB22AF32E0A0060F559 /* RootTabBar */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -640,6 +837,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		30B56CD52AF34F050060F559 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30B56CEC2AF34F060060F559 /* KKApi.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		44F73FC22AF14E110073E499 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -659,6 +864,43 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		30B56CD92AF34F050060F559 /* KKApi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30B56CF12AF34F060060F559 /* Build configuration list for PBXNativeTarget "KKApi" */;
+			buildPhases = (
+				30B56CD52AF34F050060F559 /* Headers */,
+				30B56CD62AF34F050060F559 /* Sources */,
+				30B56CD72AF34F050060F559 /* Frameworks */,
+				30B56CD82AF34F050060F559 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KKApi;
+			productName = KKApi;
+			productReference = 30B56CDA2AF34F050060F559 /* KKApi.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		30B56CE22AF34F050060F559 /* KKApiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30B56CF42AF34F060060F559 /* Build configuration list for PBXNativeTarget "KKApiTests" */;
+			buildPhases = (
+				30B56CDF2AF34F050060F559 /* Sources */,
+				30B56CE02AF34F050060F559 /* Frameworks */,
+				30B56CE12AF34F050060F559 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				30B56CE62AF34F050060F559 /* PBXTargetDependency */,
+				30B56CE82AF34F060060F559 /* PBXTargetDependency */,
+			);
+			name = KKApiTests;
+			productName = KKApiTests;
+			productReference = 30B56CE32AF34F050060F559 /* KKApiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		30C689152AF0D3AF00C54250 /* KKInterview */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 30C689402AF0D3B000C54250 /* Build configuration list for PBXNativeTarget "KKInterview" */;
@@ -673,6 +915,7 @@
 			dependencies = (
 				44F73FDB2AF14E110073E499 /* PBXTargetDependency */,
 				44F7400D2AF29C860073E499 /* PBXTargetDependency */,
+				30B56CEE2AF34F060060F559 /* PBXTargetDependency */,
 			);
 			name = KKInterview;
 			packageProductDependencies = (
@@ -734,6 +977,9 @@
 			dependencies = (
 			);
 			name = KKLibrary;
+			packageProductDependencies = (
+				30B56D052AF350480060F559 /* ComposableArchitecture */,
+			);
 			productName = KKLibrary;
 			productReference = 44F73FC72AF14E110073E499 /* KKLibrary.framework */;
 			productType = "com.apple.product-type.framework";
@@ -804,12 +1050,21 @@
 				44F740302AF2A4EC0073E499 /* Sources */,
 				44F740312AF2A4EC0073E499 /* Frameworks */,
 				44F740322AF2A4EC0073E499 /* Resources */,
+				30B56CCD2AF348760060F559 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				30B56CC82AF348760060F559 /* PBXTargetDependency */,
+				30B56CCC2AF348760060F559 /* PBXTargetDependency */,
+				30B56D032AF34FF20060F559 /* PBXTargetDependency */,
 			);
 			name = KKInterview2;
+			packageProductDependencies = (
+				30B56CBB2AF33B520060F559 /* ComposableArchitecture */,
+				30B56CBD2AF33B520060F559 /* FloatingPanel */,
+				30B56CBF2AF33B520060F559 /* UIComponent */,
+			);
 			productName = KKInterview2;
 			productReference = 44F740342AF2A4EC0073E499 /* KKInterview2.app */;
 			productType = "com.apple.product-type.application";
@@ -860,6 +1115,13 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					30B56CD92AF34F050060F559 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					30B56CE22AF34F050060F559 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 30C689152AF0D3AF00C54250;
+					};
 					30C689152AF0D3AF00C54250 = {
 						CreatedOnToolsVersion = 15.0;
 					};
@@ -926,11 +1188,27 @@
 				44F740332AF2A4EC0073E499 /* KKInterview2 */,
 				44F740482AF2A4EF0073E499 /* KKInterview2Tests */,
 				44F740522AF2A4EF0073E499 /* KKInterview2UITests */,
+				30B56CD92AF34F050060F559 /* KKApi */,
+				30B56CE22AF34F050060F559 /* KKApiTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		30B56CD82AF34F050060F559 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30B56CE12AF34F050060F559 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		30C689142AF0D3AF00C54250 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -990,6 +1268,7 @@
 				44F740432AF2A4EE0073E499 /* LaunchScreen.storyboard in Resources */,
 				44F740402AF2A4EE0073E499 /* Assets.xcassets in Resources */,
 				44F7403E2AF2A4EC0073E499 /* Main.storyboard in Resources */,
+				30F8DD1F2AF3A272001E8F56 /* FreindListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1010,17 +1289,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		30B56CD62AF34F050060F559 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30B56CF82AF34F1D0060F559 /* KKService.swift in Sources */,
+				30B56CF72AF34F1D0060F559 /* ServerConfig.swift in Sources */,
+				30B56CFF2AF34F4D0060F559 /* HttpMethod.swift in Sources */,
+				30B56CFB2AF34F420060F559 /* User.swift in Sources */,
+				30B56CDE2AF34F050060F559 /* KKApi.docc in Sources */,
+				30B56CFC2AF34F460060F559 /* Person.swift in Sources */,
+				30B56CFE2AF34F4D0060F559 /* ServiceMonitor.swift in Sources */,
+				30B56CFD2AF34F4D0060F559 /* Route.swift in Sources */,
+				30B56CF92AF34F1D0060F559 /* KKServiceProtocol.swift in Sources */,
+				30B56CFA2AF34F1D0060F559 /* Service+RequestHelpers.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30B56CDF2AF34F050060F559 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30B56CEB2AF34F060060F559 /* KKApiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		30C689122AF0D3AF00C54250 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30C689892AF1DB7B00C54250 /* Environment.swift in Sources */,
 				30C689502AF0D63D00C54250 /* RootTabBarViewController.swift in Sources */,
 				30C6897A2AF101EE00C54250 /* SortPagerIndicatorComponent.swift in Sources */,
 				44F73FBC2AF1418F0073E499 /* FriendsInvitationComponent.swift in Sources */,
 				44F73FF32AF298400073E499 /* AddContactViewController.swift in Sources */,
 				30B56CB12AF327010060F559 /* SortPagerParams.swift in Sources */,
-				30B56CAF2AF242DE0060F559 /* InterviewEpisode.swift in Sources */,
 				30C6896C2AF0EE6B00C54250 /* PersonalInfoComponent.swift in Sources */,
 				30C6896E2AF0EF9600C54250 /* SortPagerComponent.swift in Sources */,
 				44F7402F2AF2A0E40073E499 /* KKTabBarView.swift in Sources */,
@@ -1030,9 +1332,6 @@
 				44F7402E2AF2A0E10073E499 /* Extension+Component.swift in Sources */,
 				44F7402D2AF2A0DE0073E499 /* Color.swift in Sources */,
 				30C6895D2AF0E69800C54250 /* FriendsViewController.swift in Sources */,
-				30C6898D2AF1E0FF00C54250 /* Notifications.swift in Sources */,
-				30C689532AF0D67000C54250 /* RootTabBarStore.swift in Sources */,
-				30C6898B2AF1DC5B00C54250 /* AppEnvironment.swift in Sources */,
 				30C6897C2AF102C200C54250 /* FriendListComponent.swift in Sources */,
 				30C689902AF1E1FB00C54250 /* FriendsStore.swift in Sources */,
 				30C6891C2AF0D3AF00C54250 /* SceneDelegate.swift in Sources */,
@@ -1060,18 +1359,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30B56D072AF350A60060F559 /* RootTabBarStore.swift in Sources */,
 				44F740282AF29DA70073E499 /* Extension+Sequence.swift in Sources */,
-				30C689942AF1EE1B00C54250 /* Person.swift in Sources */,
-				44F73FE62AF14E6F0073E499 /* KKServiceProtocol.swift in Sources */,
-				44F73FEA2AF150F80073E499 /* KKService.swift in Sources */,
-				44F73FE82AF14FAC0073E499 /* ServerConfig.swift in Sources */,
-				30C6897E2AF1D6BE00C54250 /* Route.swift in Sources */,
-				30C689862AF1D8F000C54250 /* User.swift in Sources */,
-				30C689922AF1E58500C54250 /* ServiceMonitor.swift in Sources */,
+				30B56CD22AF34EBC0060F559 /* Environment.swift in Sources */,
+				30B56CD32AF34EBC0060F559 /* Notifications.swift in Sources */,
+				30B56CD12AF34EBC0060F559 /* AppEnvironment.swift in Sources */,
 				44F740272AF29DA70073E499 /* Extension+String.swift in Sources */,
-				30C689812AF1D73600C54250 /* HttpMethod.swift in Sources */,
-				30C689832AF1D78D00C54250 /* Service+RequestHelpers.swift in Sources */,
+				30B56CD42AF34ECD0060F559 /* InterviewEpisode.swift in Sources */,
 				44F73FCB2AF14E110073E499 /* KKLibrary.docc in Sources */,
+				30B56CB62AF32ED60060F559 /* RootViewControllerData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1087,13 +1383,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30B56CC22AF341E60060F559 /* View.swift in Sources */,
 				44F740202AF29C990073E499 /* TabBarPanelLayout.swift in Sources */,
 				44F740182AF29C990073E499 /* SearchBarView.swift in Sources */,
-				44F740242AF29D0C0073E499 /* RootViewControllerData.swift in Sources */,
 				44F7401C2AF29C990073E499 /* NavigationHeaderPanelLayout.swift in Sources */,
 				44F740212AF29C990073E499 /* Font.swift in Sources */,
-				44F740192AF29C990073E499 /* LinearGradient.swift in Sources */,
+				44F740192AF29C990073E499 /* GradientView.swift in Sources */,
 				44F7401B2AF29C990073E499 /* Colors.swift in Sources */,
+				30B56CC42AF344AE0060F559 /* WrapperView.swift in Sources */,
 				44F73FFD2AF29C860073E499 /* KKUILibrary.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1110,9 +1407,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44F7403B2AF2A4EC0073E499 /* ViewController.swift in Sources */,
+				30B56CBA2AF330E80060F559 /* KKTabBarView.swift in Sources */,
+				30F8DD192AF396AD001E8F56 /* FriendEmptyView.swift in Sources */,
+				30B56D0B2AF3540F0060F559 /* FriendsViewController.swift in Sources */,
+				30F8DD162AF38D14001E8F56 /* FriendsListViewController.swift in Sources */,
+				30B56D102AF36D3F0060F559 /* FriendsNavigationHeaderController.swift in Sources */,
+				30B56CB52AF32E990060F559 /* RootTabBarController.swift in Sources */,
 				44F740372AF2A4EC0073E499 /* AppDelegate.swift in Sources */,
+				30B56D132AF3790F0060F559 /* UserHeaderViewController.swift in Sources */,
+				30B56D152AF37BD20060F559 /* SortPagerViewController.swift in Sources */,
 				44F740392AF2A4EC0073E499 /* SceneDelegate.swift in Sources */,
+				30F8DD142AF38BE7001E8F56 /* FriendContentPanelLayout.swift in Sources */,
+				30F8DD1E2AF3A272001E8F56 /* FreindListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1136,6 +1442,36 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		30B56CC82AF348760060F559 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 44F73FC62AF14E110073E499 /* KKLibrary */;
+			targetProxy = 30B56CC72AF348760060F559 /* PBXContainerItemProxy */;
+		};
+		30B56CCC2AF348760060F559 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 44F73FF82AF29C860073E499 /* KKUILibrary */;
+			targetProxy = 30B56CCB2AF348760060F559 /* PBXContainerItemProxy */;
+		};
+		30B56CE62AF34F050060F559 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 30B56CD92AF34F050060F559 /* KKApi */;
+			targetProxy = 30B56CE52AF34F050060F559 /* PBXContainerItemProxy */;
+		};
+		30B56CE82AF34F060060F559 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 30C689152AF0D3AF00C54250 /* KKInterview */;
+			targetProxy = 30B56CE72AF34F060060F559 /* PBXContainerItemProxy */;
+		};
+		30B56CEE2AF34F060060F559 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 30B56CD92AF34F050060F559 /* KKApi */;
+			targetProxy = 30B56CED2AF34F060060F559 /* PBXContainerItemProxy */;
+		};
+		30B56D032AF34FF20060F559 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 30B56CD92AF34F050060F559 /* KKApi */;
+			targetProxy = 30B56D022AF34FF20060F559 /* PBXContainerItemProxy */;
+		};
 		30C6892E2AF0D3B000C54250 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 30C689152AF0D3AF00C54250 /* KKInterview */;
@@ -1224,6 +1560,104 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		30B56CF22AF34F060060F559 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = bingbing.KKApi;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		30B56CF32AF34F060060F559 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = bingbing.KKApi;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		30B56CF52AF34F060060F559 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = bingbing.KKApiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KKInterview.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KKInterview";
+			};
+			name = Debug;
+		};
+		30B56CF62AF34F060060F559 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = bingbing.KKApiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KKInterview.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KKInterview";
+			};
+			name = Release;
+		};
 		30C6893E2AF0D3B000C54250 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1806,6 +2240,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		30B56CF12AF34F060060F559 /* Build configuration list for PBXNativeTarget "KKApi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30B56CF22AF34F060060F559 /* Debug */,
+				30B56CF32AF34F060060F559 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30B56CF42AF34F060060F559 /* Build configuration list for PBXNativeTarget "KKApiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30B56CF52AF34F060060F559 /* Debug */,
+				30B56CF62AF34F060060F559 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		30C689112AF0D3AF00C54250 /* Build configuration list for PBXProject "KKInterview" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1935,6 +2387,26 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		30B56CBB2AF33B520060F559 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30C689492AF0D41C00C54250 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		30B56CBD2AF33B520060F559 /* FloatingPanel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30C6895E2AF0E7D900C54250 /* XCRemoteSwiftPackageReference "FloatingPanel" */;
+			productName = FloatingPanel;
+		};
+		30B56CBF2AF33B520060F559 /* UIComponent */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30C689632AF0E83800C54250 /* XCRemoteSwiftPackageReference "UIComponent" */;
+			productName = UIComponent;
+		};
+		30B56D052AF350480060F559 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30C689492AF0D41C00C54250 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
 		30C6894A2AF0D41D00C54250 /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 30C689492AF0D41C00C54250 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;

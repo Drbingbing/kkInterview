@@ -28,6 +28,63 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       shouldAutocreateTestPlan = "YES">
+      <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "44F73FCF2AF14E110073E499"
+               BuildableName = "KKLibraryTests.xctest"
+               BlueprintName = "KKLibraryTests"
+               ReferencedContainer = "container:KKInterview.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "30C6892B2AF0D3B000C54250"
+               BuildableName = "KKInterviewTests.xctest"
+               BlueprintName = "KKInterviewTests"
+               ReferencedContainer = "container:KKInterview.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "30B56CE22AF34F050060F559"
+               BuildableName = "KKApiTests.xctest"
+               BlueprintName = "KKApiTests"
+               ReferencedContainer = "container:KKInterview.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "30C689352AF0D3B000C54250"
+               BuildableName = "KKInterviewUITests.xctest"
+               BlueprintName = "KKInterviewUITests"
+               ReferencedContainer = "container:KKInterview.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "44F740012AF29C860073E499"
+               BuildableName = "KKUILibraryTests.xctest"
+               BlueprintName = "KKUILibraryTests"
+               ReferencedContainer = "container:KKInterview.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
