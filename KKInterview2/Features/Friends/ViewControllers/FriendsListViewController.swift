@@ -12,7 +12,7 @@ final class FriendsListViewController: UIViewController {
     private let emptyView = FriendEmptyView()
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     private lazy var dataSource = UICollectionViewDiffableDataSource<Int, Int>(collectionView: collectionView) { collectionView, indexPath, itemIdentifier in
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FreindListCell", for: indexPath) as! FreindListCell
         
         return cell
     }
@@ -44,6 +44,12 @@ final class FriendsListViewController: UIViewController {
         collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         collectionView.setCollectionViewLayout(createLayout(), animated: false)
         collectionView.dataSource = dataSource
+        collectionView.register(UINib(nibName: "FreindListCell", bundle: nil), forCellWithReuseIdentifier: "FreindListCell")
+        
+        var snapshot = NSDiffableDataSourceSnapshot<Int, Int>()
+        snapshot.appendSections([0])
+        snapshot.appendItems(Array(0..<20))
+        dataSource.apply(snapshot, animatingDifferences: false)
     }
     
     private func createLayout() -> UICollectionViewLayout {

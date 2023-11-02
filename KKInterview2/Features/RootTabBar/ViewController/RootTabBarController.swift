@@ -51,6 +51,7 @@ final class RootTabBarController: UITabBarController {
     
     private func bindingStyle() {
         view.backgroundColor = .white
+        kkTabBar.backgroundColor = .white
         tabBar.isHidden = true
     }
     
