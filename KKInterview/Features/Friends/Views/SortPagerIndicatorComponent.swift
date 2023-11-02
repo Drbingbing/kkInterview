@@ -1,5 +1,5 @@
 //
-//  FriendsPageIndicatorComponent.swift
+//  SortPagerIndicatorComponent.swift
 //  KKInterview
 //
 //  Created by 鍾秉辰 on 2023/10/31.
@@ -9,7 +9,7 @@ import UIKit
 import UIComponent
 import KKUILibrary
 
-struct FriendsPageIndicatorComponent: ComponentBuilder {
+struct SortPagerIndicatorComponent: ComponentBuilder {
     
     
     func build() -> Component {

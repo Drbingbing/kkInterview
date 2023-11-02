@@ -1,5 +1,5 @@
 //
-//  FriendPageComponent.swift
+//  SortPagerComponent.swift
 //  KKInterview
 //
 //  Created by 鍾秉辰 on 2023/10/31.
@@ -9,31 +9,27 @@ import UIKit
 import UIComponent
 import BaseToolbox
 
-struct FriendPageComponent: ComponentBuilder {
+struct SortPagerComponent: ComponentBuilder {
     
+    var sorts: [SortPagerParams]
     
     func build() -> Component {
         HStack(spacing: 36) {
-            Text("好友", font: .medium(size: 13))
-                .textColor(.primaryLabel)
-                .tappableView {}
-                .badge(
-                    verticalAlignment: .before,
-                    horizontalAlignment: .after,
-                    offset: CGPoint(x: 0, y: 9)
-                ) {
-                    FriendPageBadge(2)
-                }
-            Text("聊天", font: .medium(size: 13))
-                .textColor(.primaryLabel)
-                .tappableView {}
-                .badge(
-                    verticalAlignment: .before,
-                    horizontalAlignment: .after,
-                    offset: CGPoint(x: 0, y: 9)
-                ) {
-                    FriendPageBadge(100)
-                }
+            ForEach(sorts) { sort in
+                Text(sort.title, font: .medium(size: 13))
+                    .textColor(.primaryLabel)
+                    .tappableView {}
+                    .if(sort.badgeNumber > 0) { text in
+                        text
+                            .badge(
+                                verticalAlignment: .before,
+                                horizontalAlignment: .after,
+                                offset: CGPoint(x: 0, y: 9)
+                            ) {
+                                FriendPageBadge(sort.badgeNumber)
+                            }
+                    }
+            }
         }
         .inset(left: 32, bottom: 9, right: 32)
         .view()

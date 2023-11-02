@@ -103,6 +103,13 @@ final class FriendsViewController: UIViewController {
                 self.componentView.component = self.component
             }
             .store(in: &cancellable)
+        viewStore.publisher.sorts
+            .removeDuplicates()
+            .sink { [weak self] _ in
+                guard let self else { return }
+                self.componentView.component = self.component
+            }
+            .store(in: &cancellable)
     }
     
     private func setupScrollView() {
@@ -173,8 +180,8 @@ final class FriendsViewController: UIViewController {
                 FriendsInvitationComponent(persons: viewStore.invitations, isStacked: viewStore.isStacked) { [weak self] person in
                     self?.viewStore.send(.invitationTapped(person))
                 }
-                FriendPageComponent()
-                FriendsPageIndicatorComponent()
+                SortPagerComponent(sorts: viewStore.sorts)
+                SortPagerIndicatorComponent()
             }
             Separator(color: .primarySeparator)
             HStack(spacing: 15, alignItems: .center) {

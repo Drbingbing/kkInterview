@@ -25,6 +25,7 @@ struct FriendsStore: Reducer {
         var filterList: [Person]? = nil
         var isRefreshing: Bool = false
         var isStacked: Bool = true
+        var sorts: [SortPagerParams] = []
     }
     
     enum Action {
@@ -36,6 +37,7 @@ struct FriendsStore: Reducer {
         case searchTextChanged(String)
         case refresh
         case invitationTapped(Person)
+        case createSortButtons
     }
     
     var body: some ReducerOf<Self> {
@@ -47,20 +49,20 @@ struct FriendsStore: Reducer {
             case .viewDidLoad:
                 switch episode {
                 case .episode1:
-                    return .concatenate(
+                    return .merge(
                         .run { await $0(.friendListResponse(TaskResult { try await AppEnvironment.current.apiService.friendList(page: 4) })) },
-                        .send(.currentUserUpdated)
+                        .send(.createSortButtons)
                     )
                 case .episode2:
-                    return .concatenate(
+                    return .merge(
                         .run { await $0(.friendListResponse(TaskResult { try await AppEnvironment.current.apiService.friendList(page: 1) })) },
                         .run { await $0(.friendListResponse(TaskResult { try await AppEnvironment.current.apiService.friendList(page: 2) })) },
-                        .send(.currentUserUpdated)
+                        .send(.createSortButtons)
                     )
                 case .episode3:
-                    return .concatenate(
+                    return .merge(
                         .run { await $0(.friendListResponse(TaskResult { try await AppEnvironment.current.apiService.friendList(page: 3) })) },
-                        .send(.currentUserUpdated)
+                        .send(.createSortButtons)
                     )
                 }
                 
@@ -70,11 +72,19 @@ struct FriendsStore: Reducer {
                     let merged = mergePersons(previous: state.friendList, new: person)
                     state.friendList = merged
                     state.isRefreshing = false
+                    state.sorts = [
+                        SortPagerParams(title: "好友", badgeNumber: merged.filter({ $0.status == 2 }).count ),
+                        SortPagerParams(title: "聊天", badgeNumber: 100)
+                    ]
                 case .episode3:
                     let merged = mergePersons(previous: state.friendList, new: person)
                     state.friendList = merged.filter { $0.status != 0 }
                     state.invitations = merged.filter { $0.status == 0 }
                     state.isRefreshing = false
+                    state.sorts = [
+                        SortPagerParams(title: "好友", badgeNumber: merged.filter({ $0.status == 2 }).count ),
+                        SortPagerParams(title: "聊天", badgeNumber: 100)
+                    ]
                 }
                 return .none
             case .friendListResponse(.failure):
@@ -101,6 +111,12 @@ struct FriendsStore: Reducer {
                 return .send(.viewDidLoad)
             case .invitationTapped:
                 state.isStacked.toggle()
+                return .none
+            case .createSortButtons:
+                state.sorts = [
+                    SortPagerParams(title: "好友", badgeNumber: 0),
+                    SortPagerParams(title: "聊天", badgeNumber: 0)
+                ]
                 return .none
             }
         }
