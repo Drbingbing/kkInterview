@@ -109,8 +109,9 @@ final class FriendsViewController: UIViewController {
             .store(in: &cancellable)
         viewStore.publisher.sorts
             .removeDuplicates()
-            .sink { [weak self] _ in
+            .sink { [weak self] sorts in
                 guard let self else { return }
+                self.sortPagerView.populate(sorts: sorts)
                 self.componentView.component = self.component
             }
             .store(in: &cancellable)
@@ -182,6 +183,7 @@ final class FriendsViewController: UIViewController {
     
     private var cancellable: [AnyCancellable] = []
     private let componentView = ComponentView()
+    private let sortPagerView = SortPagerView()
     private lazy var friendListView = {
         let view = FriendListView()
         view.delegate = self
@@ -201,8 +203,8 @@ final class FriendsViewController: UIViewController {
                 FriendsInvitationComponent(person: viewStore.invitations, isStacked: viewStore.isStacked) { [weak self] person in
                     self?.viewStore.send(.invitationTapped(person))
                 }
-                SortPagerComponent(sorts: viewStore.sorts)
-                SortPagerIndicatorComponent()
+                sortPagerView
+                    .size(width: .fill, height: 30)
             }
             Separator(color: .primarySeparator)
             searchBar

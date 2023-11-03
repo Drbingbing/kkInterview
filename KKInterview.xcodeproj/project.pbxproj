@@ -60,9 +60,8 @@
 		30C689602AF0E7D900C54250 /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = 30C6895F2AF0E7D900C54250 /* FloatingPanel */; };
 		30C689652AF0E83800C54250 /* UIComponent in Frameworks */ = {isa = PBXBuildFile; productRef = 30C689642AF0E83800C54250 /* UIComponent */; };
 		30C6896C2AF0EE6B00C54250 /* PersonalInfoComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6896B2AF0EE6B00C54250 /* PersonalInfoComponent.swift */; };
-		30C6896E2AF0EF9600C54250 /* SortPagerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6896D2AF0EF9600C54250 /* SortPagerComponent.swift */; };
 		30C689722AF0F25300C54250 /* EmptyFriendsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689712AF0F25300C54250 /* EmptyFriendsComponent.swift */; };
-		30C6897A2AF101EE00C54250 /* SortPagerIndicatorComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689792AF101EE00C54250 /* SortPagerIndicatorComponent.swift */; };
+		30C6897A2AF101EE00C54250 /* SortPagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689792AF101EE00C54250 /* SortPagerView.swift */; };
 		30C6897C2AF102C200C54250 /* FriendListComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6897B2AF102C200C54250 /* FriendListComponent.swift */; };
 		30F8DD142AF38BE7001E8F56 /* FriendContentPanelLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F8DD132AF38BE7001E8F56 /* FriendContentPanelLayout.swift */; };
 		30F8DD162AF38D14001E8F56 /* FriendsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F8DD152AF38D14001E8F56 /* FriendsListViewController.swift */; };
@@ -299,12 +298,11 @@
 		30C689662AF0E86700C54250 /* FloatingContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingContentViewController.swift; sourceTree = "<group>"; };
 		30C689682AF0E8F400C54250 /* NavigationHeaderPanelLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHeaderPanelLayout.swift; sourceTree = "<group>"; };
 		30C6896B2AF0EE6B00C54250 /* PersonalInfoComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoComponent.swift; sourceTree = "<group>"; };
-		30C6896D2AF0EF9600C54250 /* SortPagerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortPagerComponent.swift; sourceTree = "<group>"; };
 		30C6896F2AF0F02300C54250 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		30C689712AF0F25300C54250 /* EmptyFriendsComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyFriendsComponent.swift; sourceTree = "<group>"; };
 		30C689732AF0FC6100C54250 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		30C689772AF1010800C54250 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		30C689792AF101EE00C54250 /* SortPagerIndicatorComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortPagerIndicatorComponent.swift; sourceTree = "<group>"; };
+		30C689792AF101EE00C54250 /* SortPagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortPagerView.swift; sourceTree = "<group>"; };
 		30C6897B2AF102C200C54250 /* FriendListComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListComponent.swift; sourceTree = "<group>"; };
 		30C6897D2AF1D6BE00C54250 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		30C689802AF1D73600C54250 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
@@ -665,9 +663,8 @@
 			isa = PBXGroup;
 			children = (
 				30C6896B2AF0EE6B00C54250 /* PersonalInfoComponent.swift */,
-				30C6896D2AF0EF9600C54250 /* SortPagerComponent.swift */,
 				30C689712AF0F25300C54250 /* EmptyFriendsComponent.swift */,
-				30C689792AF101EE00C54250 /* SortPagerIndicatorComponent.swift */,
+				30C689792AF101EE00C54250 /* SortPagerView.swift */,
 				30C6897B2AF102C200C54250 /* FriendListComponent.swift */,
 				44F73FBB2AF1418F0073E499 /* FriendsInvitationComponent.swift */,
 			);
@@ -1346,12 +1343,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				30C689502AF0D63D00C54250 /* RootTabBarViewController.swift in Sources */,
-				30C6897A2AF101EE00C54250 /* SortPagerIndicatorComponent.swift in Sources */,
+				30C6897A2AF101EE00C54250 /* SortPagerView.swift in Sources */,
 				44F73FBC2AF1418F0073E499 /* FriendsInvitationComponent.swift in Sources */,
 				44F73FF32AF298400073E499 /* AddContactViewController.swift in Sources */,
 				30F8DD202AF49EEC001E8F56 /* SearchBarView.swift in Sources */,
 				30C6896C2AF0EE6B00C54250 /* PersonalInfoComponent.swift in Sources */,
-				30C6896E2AF0EF9600C54250 /* SortPagerComponent.swift in Sources */,
 				44F7402F2AF2A0E40073E499 /* KKTabBarView.swift in Sources */,
 				44F7402C2AF2A0DB0073E499 /* FloatingContentViewController.swift in Sources */,
 				30C689722AF0F25300C54250 /* EmptyFriendsComponent.swift in Sources */,
