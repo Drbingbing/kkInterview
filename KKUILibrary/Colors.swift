@@ -28,6 +28,7 @@ public extension UIColor {
     static var secondarySeparator: UIColor {
         return UIColor(red: 228/255, green: 228/255, blue: 228/255, alpha: 1)
     }
+    
 }
 
 // MARK: - Bacground
@@ -36,6 +37,11 @@ public extension UIColor {
     /// r: 252, g: 252, b: 252
     static var background1: UIColor {
         return UIColor(red: 252/255, green: 252/255, blue: 252/255, alpha: 1)
+    }
+    
+    /// r: 245, g: 245, b: 245
+    static var background2: UIColor {
+        return UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1)
     }
 }
 
@@ -46,6 +52,11 @@ public extension UIColor {
     /// r: 71, g: 71, b: 71
     static var primaryLabel: UIColor {
         return UIColor(red: 71/255, green: 71/255, blue: 71/255, alpha: 1)
+    }
+    
+    /// r: 204, g: 204, b: 204
+    static var tertitaryLabel: UIColor {
+        return UIColor(red: 204/255, green: 204/255, blue: 204/255, alpha: 1)
     }
 }
 

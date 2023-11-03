@@ -117,6 +117,20 @@ final class FriendsViewController: UIViewController {
                 self?.searchBar.searchBar.text = text
             }
             .store(in: &cancellable)
+        viewStore.publisher
+            .navigateToAddContact
+            .removeDuplicates()
+            .sink { [weak self] navigate in
+                guard let self else { return }
+                if navigate {
+                    let vc = AddContactViewController()
+                    vc.delegate = self
+                    self.tabBarController?.navigationController?.pushViewController(vc, animated: true)
+                } else {
+                    self.tabBarController?.navigationController?.popViewController(animated: true)
+                }
+            }
+            .store(in: &cancellable)
     }
     
     private func setupScrollView() {
@@ -142,8 +156,7 @@ final class FriendsViewController: UIViewController {
         content.component = HStack(spacing: 24) {
             Image("ic_nav_pink_withdraw")
                 .tappableView { [weak self] in
-                    let vc = AddContactViewController()
-                    self?.tabBarController?.navigationController?.pushViewController(vc, animated: true)
+                    self?.store.send(.didATMButtonTapped)
                 }
             Image("ic_nav_pink_transfer")
                 .tappableView { }
@@ -241,5 +254,17 @@ extension FriendsViewController: UIScrollViewDelegate {
         if !scrollView.isDecelerating {
             store.send(.searchBarEndEditing)
         }
+    }
+}
+
+// MARK: - AddContactViewControllerDelegate
+extension FriendsViewController: AddContactViewControllerDelegate {
+    
+    func didBackButtonTapped(_ viewController: AddContactViewController) {
+        store.send(.closeContactButtonTapped)
+    }
+    
+    func didCloseButtonTapped(_ viewController: AddContactViewController) {
+        store.send(.closeContactButtonTapped)
     }
 }

@@ -28,6 +28,7 @@ public struct FriendsStore: Reducer {
         public var sorts: [SortPagerParams] = []
         public var disableSearchbar: Bool = false
         public var searchText: String? = nil
+        public var navigateToAddContact: Bool = false
         
         public init() {}
     }
@@ -42,6 +43,9 @@ public struct FriendsStore: Reducer {
         case refresh
         case invitationTapped(Person)
         case createSortButtons
+        case didATMButtonTapped
+        case closeContactButtonTapped
+        case popViewController
     }
     
     public var body: some ReducerOf<Self> {
@@ -132,6 +136,14 @@ public struct FriendsStore: Reducer {
                     SortPagerParams(title: "好友", badgeNumber: 0),
                     SortPagerParams(title: "聊天", badgeNumber: 0)
                 ]
+                return .none
+            case .didATMButtonTapped:
+                state.navigateToAddContact = true
+                return .none
+            case .closeContactButtonTapped:
+                return .send(.popViewController)
+            case .popViewController:
+                state.navigateToAddContact = false
                 return .none
             }
         }

@@ -69,17 +69,16 @@ final class NewInvitationViewController: UIViewController {
     
     private var component: Component? {
         if viewStore.invitations.isEmpty { return nil }
-        return VStack(spacing: viewStore.isStacked ? -20 : 10) {
+        return VStack(spacing: viewStore.isStacked ? -80 : 10) {
             ForEach(viewStore.invitations.enumerated()) { index, person in
                 let total = CGFloat(viewStore.invitations.count)
                 let position = CGFloat(index)
                 let offset = total - position
                 InvitationComponent(person: person)
+                    .inset(h: viewStore.isStacked ? (offset - 1) * 10 : 0)
                     .tappableView { [weak self] in
                         self?.delegate?.didCardTapped(person: person)
                     }
-                    .inset(bottom: viewStore.isStacked ? -offset * 20 : 0)
-                    .inset(h: viewStore.isStacked ? CGFloat(offset) * 10 : 0)
             }
         }
         .inset(
@@ -90,7 +89,6 @@ final class NewInvitationViewController: UIViewController {
         )
         .view()
         .backgroundColor(.background1)
-        .animator(AnimatedReloadAnimator())
     }
     
     private let componentView = ComponentScrollView()

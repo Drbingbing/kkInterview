@@ -17,17 +17,16 @@ struct FriendsInvitationComponent: ComponentBuilder {
     var onTap: (Person) -> Void
     
     func build() -> Component {
-        VStack(spacing: isStacked ? -20 : 10) {
+        VStack(spacing: isStacked ? -80 : 10) {
             ForEach(person.enumerated()) { index, people in
                 let total = CGFloat(person.count)
                 let position = CGFloat(index)
                 let offset = total - position
                 InvitationComponent(person: people)
+                    .inset(h: isStacked ? (offset - 1) * 10 : 0)
                     .tappableView {
                         onTap(people)
                     }
-                    .inset(bottom: isStacked ? -offset * 20 : 0)
-                    .inset(h: isStacked ? CGFloat(offset) * 10 : 0)
             }
         }
         .inset(
