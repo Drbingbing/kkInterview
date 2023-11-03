@@ -21,6 +21,11 @@ public struct AppEnvironment {
         replaceCurrentEnvironment(currentUser: user)
     }
     
+    public static func updateServerConfig(_ config: ServerConfigType) {
+        let service = KKService(serverConfig: config)
+        replaceCurrentEnvironment(apiService: service)
+    }
+    
     public static func replaceCurrentEnvironment(
         apiService: KKServiceProtocol = AppEnvironment.current.apiService,
         currentUser: User? = AppEnvironment.current.currentUser,
@@ -43,5 +48,24 @@ public struct AppEnvironment {
     /// Push a new environment onto the stack
     public static func pushEnvironment(_ env: Environment) {
         stack.append(env)
+    }
+    
+    public static func pushEnvironment(
+        apiService: KKServiceProtocol = AppEnvironment.current.apiService,
+        currentUser: User? = AppEnvironment.current.currentUser,
+        episode: InterviewEpisode = AppEnvironment.current.episode
+    ) {
+        pushEnvironment(
+            Environment(
+                apiService: apiService,
+                currentUser: currentUser,
+                episode: episode
+            )
+        )
+    }
+    
+    @discardableResult
+    public static func popEnvironment() -> Environment? {
+        return stack.popLast()
     }
 }
