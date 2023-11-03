@@ -20,8 +20,10 @@ public struct ServerConfig: ServerConfigType {
     )
     
     public static let development: ServerConfigType = ServerConfig(
-        apiBaseUrl: URL(string: "https://dimanyen.github.io")!
+        apiBaseUrl: URL(string: "https://github.io")!
     )
 }
 
-
+public func == (lhs: ServerConfigType, rhs: ServerConfigType) -> Bool {
+    return type(of: lhs) == type(of: rhs) && lhs.apiBaseUrl == rhs.apiBaseUrl
+}

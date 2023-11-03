@@ -26,10 +26,14 @@ extension KKService {
         do {
             let (data, _) = try await KKService.session.data(from: url)
             monitor.didReceive(responseData: data)
-            return try JSONDecoder().decode(M.self, from: data)
+            return try decode(data)
         } catch {
             monitor.didReceive(error: error)
             throw error
         }
+    }
+    
+    func decode<T: Decodable>(_ jsonData: Data) throws -> T {
+        return try JSONDecoder().decode(T.self, from: jsonData)
     }
 }

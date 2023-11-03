@@ -18,3 +18,12 @@ public protocol KKServiceProtocol {
     
     func friendList(page: Int) async throws -> [Person]
 }
+
+public func == (lhs: KKServiceProtocol, rhs: KKServiceProtocol) -> Bool {
+    return type(of: lhs) == type(of: rhs) && lhs.serverConfig == rhs.serverConfig
+}
+
+public func != (lhs: KKServiceProtocol, rhs: KKServiceProtocol) -> Bool {
+    return !(lhs == rhs)
+}
+
