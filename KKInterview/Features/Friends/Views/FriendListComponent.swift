@@ -8,27 +8,72 @@
 import UIKit
 import UIComponent
 import KKLibrary
+import KKUILibrary
 import KKApi
+import ComposableArchitecture
+import Combine
 
-struct FriendListComponent: ComponentBuilder {
+protocol FriendListViewDelegate: AnyObject {
+    func friendListDidRefresh()
+}
+
+final class FriendListView: View {
     
-    var person: [Person]
+    weak var delegate: FriendListViewDelegate?
     
-    func build() -> Component {
-        if person.isEmpty {
-            EmptyFriendsComponent()
-        } else {
-            VStack {
-                ForEach(person) { person in
-                    FriendComponent(person: person)
-                    Separator(color: .secondarySeparator)
-                        .inset(left: 85, right: 30)
+    lazy var refreshControl = {
+        let view = UIRefreshControl()
+        view.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        view.tintColor = .primaryTintColor
+        view.transform = .identity.scaledBy(0.6)
+        return view
+    }()
+    
+    private let store = Store(initialState: FriendListStore.State(), reducer: { FriendListStore() })
+    private lazy var viewStore = ViewStore(store, observe: { $0 })
+    private let componentView = ComponentScrollView()
+    private var cancellables: [AnyCancellable] = []
+    
+    
+    override func viewDidLoad() {
+        addSubview(componentView)
+        componentView.translatesAutoresizingMaskIntoConstraints = false
+        componentView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        componentView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        componentView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        componentView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        componentView.refreshControl = refreshControl
+        componentView.animator = AnimatedReloadAnimator()
+        
+        viewStore.publisher.list
+            .sink { [weak self] person in
+                guard let self else { return }
+                if person.isEmpty {
+                    self.componentView.component = VStack {
+                        EmptyFriendsComponent()
+                    }
+                    return
                 }
+                self.componentView.component = VStack {
+                    ForEach(person) { person in
+                        FriendComponent(person: person)
+                        Separator(color: .secondarySeparator)
+                            .inset(left: 85, right: 30)
+                    }
+                }
+                .inset(h: 20)
+                .view()
+                .backgroundColor(.white)
             }
-            .inset(h: 20)
-            .view()
-            .backgroundColor(.white)
-        }
+            .store(in: &cancellables)
+    }
+    
+    @objc private func refresh() {
+        delegate?.friendListDidRefresh()
+    }
+    
+    func populate(person: [Person]) {
+        store.send(.configure(person))
     }
 }
 

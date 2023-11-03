@@ -69,6 +69,7 @@
 		30F8DD192AF396AD001E8F56 /* FriendEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F8DD182AF396AD001E8F56 /* FriendEmptyView.swift */; };
 		30F8DD1E2AF3A272001E8F56 /* FreindListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F8DD1C2AF3A272001E8F56 /* FreindListCell.swift */; };
 		30F8DD1F2AF3A272001E8F56 /* FreindListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30F8DD1D2AF3A272001E8F56 /* FreindListCell.xib */; };
+		30F8DD202AF49EEC001E8F56 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F73FB92AF13EC80073E499 /* SearchBarView.swift */; };
 		44D5993A2AF3C09100A11594 /* FriendsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6898F2AF1E1FB00C54250 /* FriendsStore.swift */; };
 		44D5993B2AF3C0AE00A11594 /* SortPagerParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B56CB02AF327010060F559 /* SortPagerParams.swift */; };
 		44D5993E2AF3C49900A11594 /* UserHeaderStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D5993D2AF3C49900A11594 /* UserHeaderStore.swift */; };
@@ -94,7 +95,6 @@
 		44F7400B2AF29C860073E499 /* KKUILibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 44F73FFB2AF29C860073E499 /* KKUILibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		44F7400E2AF29C860073E499 /* KKUILibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F73FF92AF29C860073E499 /* KKUILibrary.framework */; };
 		44F7400F2AF29C860073E499 /* KKUILibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 44F73FF92AF29C860073E499 /* KKUILibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		44F740182AF29C990073E499 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F73FB92AF13EC80073E499 /* SearchBarView.swift */; };
 		44F740192AF29C990073E499 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689732AF0FC6100C54250 /* GradientView.swift */; };
 		44F7401B2AF29C990073E499 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689582AF0E54900C54250 /* Colors.swift */; };
 		44F7401C2AF29C990073E499 /* NavigationHeaderPanelLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C689682AF0E8F400C54250 /* NavigationHeaderPanelLayout.swift */; };
@@ -783,7 +783,6 @@
 				30C689682AF0E8F400C54250 /* NavigationHeaderPanelLayout.swift */,
 				30C6896F2AF0F02300C54250 /* Font.swift */,
 				30C689732AF0FC6100C54250 /* GradientView.swift */,
-				44F73FB92AF13EC80073E499 /* SearchBarView.swift */,
 				30B56CA72AF236B30060F559 /* TabBarPanelLayout.swift */,
 				44F73FFB2AF29C860073E499 /* KKUILibrary.h */,
 				44F73FFC2AF29C860073E499 /* KKUILibrary.docc */,
@@ -804,6 +803,7 @@
 		44F7402B2AF2A05C0073E499 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				44F73FB92AF13EC80073E499 /* SearchBarView.swift */,
 				30C689662AF0E86700C54250 /* FloatingContentViewController.swift */,
 				30C689772AF1010800C54250 /* Color.swift */,
 				44F73FBD2AF143DE0073E499 /* Extension+Component.swift */,
@@ -1349,6 +1349,7 @@
 				30C6897A2AF101EE00C54250 /* SortPagerIndicatorComponent.swift in Sources */,
 				44F73FBC2AF1418F0073E499 /* FriendsInvitationComponent.swift in Sources */,
 				44F73FF32AF298400073E499 /* AddContactViewController.swift in Sources */,
+				30F8DD202AF49EEC001E8F56 /* SearchBarView.swift in Sources */,
 				30C6896C2AF0EE6B00C54250 /* PersonalInfoComponent.swift in Sources */,
 				30C6896E2AF0EF9600C54250 /* SortPagerComponent.swift in Sources */,
 				44F7402F2AF2A0E40073E499 /* KKTabBarView.swift in Sources */,
@@ -1418,7 +1419,6 @@
 			files = (
 				30B56CC22AF341E60060F559 /* View.swift in Sources */,
 				44F740202AF29C990073E499 /* TabBarPanelLayout.swift in Sources */,
-				44F740182AF29C990073E499 /* SearchBarView.swift in Sources */,
 				44F7401C2AF29C990073E499 /* NavigationHeaderPanelLayout.swift in Sources */,
 				44F740212AF29C990073E499 /* Font.swift in Sources */,
 				44F740192AF29C990073E499 /* GradientView.swift in Sources */,

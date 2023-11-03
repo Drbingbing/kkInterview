@@ -54,7 +54,7 @@ final class FriendsViewController: UIViewController {
     }
     
     private func bindingStyle() {
-        view.backgroundColor = .background1
+        view.backgroundColor = .white
     }
     
     private func binding() {
@@ -66,8 +66,9 @@ final class FriendsViewController: UIViewController {
             .store(in: &cancellable)
         viewStore.publisher.friendList
             .removeDuplicates()
-            .sink { [weak self] _ in
+            .sink { [weak self] friends in
                 guard let self else { return }
+                self.friendListView.populate(person: friends)
                 self.componentView.component = self.component
             }
             .store(in: &cancellable)
@@ -86,15 +87,17 @@ final class FriendsViewController: UIViewController {
             .store(in: &cancellable)
         viewStore.publisher.filterList
             .removeDuplicates()
-            .sink { [weak self] _ in
+            .compactMap { $0 }
+            .sink { [weak self] filtered in
                 guard let self else { return }
+                self.friendListView.populate(person: filtered)
                 self.componentView.component = self.component
             }
             .store(in: &cancellable)
         viewStore.publisher.isRefreshing
             .removeDuplicates()
             .sink { [weak self] isRefreshing in
-                isRefreshing ? self?.refreshControl.beginRefreshing() : self?.refreshControl.endRefreshing()
+                isRefreshing ? self?.friendListView.refreshControl.beginRefreshing() : self?.friendListView.refreshControl.endRefreshing()
             }
             .store(in: &cancellable)
         viewStore.publisher.isStacked
@@ -137,9 +140,6 @@ final class FriendsViewController: UIViewController {
         view.addSubview(componentView)
         componentView.component = component
         componentView.animator = AnimatedReloadAnimator(cascade: true)
-        componentView.delaysContentTouches = false
-        componentView.delegate = self
-        componentView.refreshControl = refreshControl
     }
     
     private func setupNavigationHeaderController() {
@@ -177,22 +177,23 @@ final class FriendsViewController: UIViewController {
         store.send(.searchBarEndEditing)
     }
     
-    @objc private func refresh() {
-        store.send(.refresh)
-    }
-    
     // MARK: - Private properties
     private lazy var dismissKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-    private lazy var refreshControl = {
-        let view = UIRefreshControl()
-        view.addTarget(self, action: #selector(refresh), for: .valueChanged)
-        view.tintColor = .primaryTintColor
-        view.transform = .identity.scaledBy(0.6)
+    
+    private var cancellable: [AnyCancellable] = []
+    private let componentView = ComponentView()
+    private lazy var friendListView = {
+        let view = FriendListView()
+        view.delegate = self
         return view
     }()
-    private var cancellable: [AnyCancellable] = []
-    private let componentView = ComponentScrollView()
-    private let searchBar = SearchBarView()
+        
+    private lazy var searchBar = {
+        let view = SearchBarView()
+        view.searchBar.delegate = self
+        return view
+    }()
+    
     private var component: Component {
         VStack {
             if !viewStore.showKeyboard {
@@ -204,22 +205,10 @@ final class FriendsViewController: UIViewController {
                 SortPagerIndicatorComponent()
             }
             Separator(color: .primarySeparator)
-            HStack(spacing: 15, alignItems: .center) {
-                searchBar
-                    .then {
-                        $0.searchBar.delegate = self
-                        $0.searchBar.searchBarStyle = .minimal
-                        $0.searchBar.placeholder = "想轉一筆給誰呢？"
-                        $0.searchBar.searchTextField.font = .regular()
-                    }
-                    .flex()
-                Image("ic_btn_add_friends")
-                    .tappableView {}
-            }
-            .inset(UIEdgeInsets(top: 15, left: 30, bottom: 10, right: 30))
-            .view()
-            .backgroundColor(.white)
-            FriendListComponent(person: viewStore.filterList ?? viewStore.friendList)
+            searchBar
+                .size(width: .fill, height: 61)
+            friendListView
+                .size(width: .fill, height: .absolute(view.bounds.height))
         }
     }
 }
@@ -266,5 +255,13 @@ extension FriendsViewController: AddContactViewControllerDelegate {
     
     func didCloseButtonTapped(_ viewController: AddContactViewController) {
         store.send(.closeContactButtonTapped)
+    }
+}
+
+// MARK: - FriendListViewDelegate
+extension FriendsViewController: FriendListViewDelegate {
+    
+    func friendListDidRefresh() {
+        store.send(.refresh)
     }
 }

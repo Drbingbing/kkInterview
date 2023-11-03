@@ -49,9 +49,13 @@ private struct FriendPageBadge: ComponentBuilder {
     init(_ number: Int) {
         let numberString = number > 99 ? "99+" : "\(number)"
         let size = numberString.size(forFont: Self.font, maxWidth: 100)
-        let isCircle = number < 99
+        
         self.number = numberString
-        self.size = isCircle ? CGSize(width: max(size.width, size.height), height: max(size.width, size.height)) : CGSize(width: size.width, height: size.height)
+        if size.width < size.height {
+            self.size = CGSize(width: size.height, height: size.height)
+        } else {
+            self.size = size
+        }
     }
     
     func build() -> Component {

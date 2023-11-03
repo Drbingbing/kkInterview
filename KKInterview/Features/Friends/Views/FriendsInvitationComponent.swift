@@ -37,7 +37,7 @@ struct FriendsInvitationComponent: ComponentBuilder {
         )
         .view()
         .backgroundColor(.background1)
-        .animator(AnimatedReloadAnimator())
+        .size(width: .fill)
     }
 }
 

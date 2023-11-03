@@ -40,6 +40,7 @@ struct EmptyFriendsComponent: ComponentBuilder {
                         .inset(right: 8)
                 }
                 .shadow(color: .appleGreen.withAlphaComponent(0.4))
+                .tappableView {}
             Space(height: 37)
             HStack(alignItems: .center) {
                 Text("幫助好友更快找到你？", font: .regular(size: 13))
@@ -56,7 +57,13 @@ struct EmptyFriendsComponent: ComponentBuilder {
                     )
                 )
             }
+            .tappableView {}
+            
+            Color(.white)
+                .size(width: .fill, height: 100)
         }
-        .size(width: .fill)
+        .size(width: .fill, height: .fill)
+        .view()
+        .backgroundColor(.white)
     }
 }
