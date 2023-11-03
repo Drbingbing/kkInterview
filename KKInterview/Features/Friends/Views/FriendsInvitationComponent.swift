@@ -17,7 +17,7 @@ struct FriendsInvitationComponent: ComponentBuilder {
     var onTap: (Person) -> Void
     
     func build() -> Component {
-        VStack(spacing: isStacked ? -80 : 10) {
+        VStack(spacing: person.isEmpty ? 0 : isStacked ? -80 : 10) {
             ForEach(person.enumerated()) { index, people in
                 let total = CGFloat(person.count)
                 let position = CGFloat(index)
@@ -32,7 +32,7 @@ struct FriendsInvitationComponent: ComponentBuilder {
         .inset(
             top: person.isEmpty ? 15 : 30,
             left: 30,
-            bottom: 30 + CGFloat(person.count) * (isStacked ? 10 : 0),
+            bottom: person.isEmpty ? 15 : 30 + CGFloat(person.count) * (isStacked ? 10 : 0),
             right: 30
         )
         .view()
